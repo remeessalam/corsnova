@@ -70,7 +70,7 @@ const ContactForm = () => {
       className="py-[5rem] bg-cover bg-[100%_40%] relative min-h-[40rem] flex items-center"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
-      <div className="absolute top-0 w-full h-full bg-secondary/80"></div>
+      <div className="absolute top-0 w-full h-full bg-black/80"></div>
       <div className="wrapper relative z-10 w-full">
         <div className="flex flex-col items-center gap-5">
           <SubHeading heading="Contact Us" />

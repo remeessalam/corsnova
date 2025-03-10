@@ -5,6 +5,8 @@ import { appDevelopmentServices, webDevelopmentServices } from "../constant";
 import TrustWorthySection from "../components/TrustWorthySection";
 import appDevAboutImg from "../assets/images/landingpage/app-dev-about.webp";
 import webDevAboutImg from "../assets/images/landingpage/web-dev-about.webp";
+import ReactPlayer from "react-player";
+import vid from "../assets/video/banner.mp4";
 
 const LandingHeader = lazy(() =>
   import("../components/landingPages/LandingHeader")
@@ -35,17 +37,8 @@ const LandingPage = ({ page }) => {
   return (
     <>
       <LandingHeader />
-      <section id="banner" className="h-screen relative text-white">
-        <div className="absolute top-0 w-full h-full bg-secondary/90"></div>
-        <img
-          loading="lazy"
-          src={bannerImg}
-          sizes="(max-width: 600px) 200px, 
-         (max-width: 1200px) 800px, 
-         1200px"
-          className="w-full h-full absolute -z-10 object-cover object-center"
-          alt=""
-        />
+
+      <section id="banner" className="h-screen w-screen  relative text-white">
         <div
           data-aos="fade-up"
           className="wrapper text-center flex flex-col gap-5 justify-center items-center h-full relative z-10"
@@ -62,6 +55,29 @@ const LandingPage = ({ page }) => {
           <p className="sub-heading">
             AI Meets Integrity - Empowering Innovation with Intelligence
           </p>
+        </div>
+        <div className="absolute top-0">
+          <ReactPlayer
+            url={vid}
+            playing
+            muted
+            playsinline
+            loop
+            pip={false}
+            width="100%"
+            height="100%"
+            config={{
+              file: {
+                attributes: {
+                  style: {
+                    width: "100vw",
+                    height: "100vh",
+                    objectFit: "cover",
+                  },
+                },
+              },
+            }}
+          />
         </div>
       </section>
       <section id="about" className="text-white wrapper pt-[3rem]">
@@ -97,7 +113,7 @@ const LandingPage = ({ page }) => {
                   height="200"
                 />
               </div>
-              <h2 className="heading-2 max-w-[60rem] mx-auto">
+              <h2 className="heading-2 max-w-[60rem] mx-auto !text-black">
                 {isWebLanding
                   ? "Innovative Web Development Solutions for Modern Brands"
                   : "Your Ideas, Perfectly Engineered into Apps"}
@@ -125,7 +141,7 @@ const LandingPage = ({ page }) => {
         />
         <h2
           data-aos="fade-up"
-          className="heading-2 max-w-[60rem] mx-auto text-center"
+          className="heading-2 max-w-[60rem] mx-auto text-center text-black"
         >
           Enhancing Brands with Engaging Web Experiences
         </h2>
@@ -133,18 +149,18 @@ const LandingPage = ({ page }) => {
           {services.map((service) => (
             <div
               data-aos="fade-up"
-              className="bg-tertiary items-center rounded-lg p-5 flex text-center flex-col"
+              className="bg-black items-center rounded-lg p-5 flex text-center flex-col"
             >
               <img
                 loading="lazy"
                 src={service.icon}
-                className="h-[3.5rem] md:h-[4.5rem] object-contain"
+                className="h-[3.5rem] md:h-[4.5rem] object-contain grayscale"
                 alt={service.title}
                 width="100"
                 height="100"
               />
               <h6 className="text-xl font-medium mt-2">{service.title}</h6>
-              <p className="desc mt-2">{service.description}</p>
+              <p className="desc mt-2 !text-white">{service.description}</p>
             </div>
           ))}
         </div>

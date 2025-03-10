@@ -12,7 +12,27 @@ import {
   PenTool,
   PencilRuler,
 } from "lucide-react";
+// porfolio image
+// Import all images at the top (Web Development)
+import FiveGHomesImg from "./assets/web-development-portfolio/5ghomes.png";
+import BayutImg from "./assets/web-development-portfolio/bayut.png";
+import ColdCreekcapImg from "./assets/web-development-portfolio/cold creekcap.png";
+import EmergencyMusicImg from "./assets/web-development-portfolio/emergency music .png";
+import FlatiornImg from "./assets/web-development-portfolio/flatiorn.png";
+import MavenImg from "./assets/web-development-portfolio/maven.png";
+import MenissaCateringsImg from "./assets/web-development-portfolio/menissa caterings.png";
+import MethodistImg from "./assets/web-development-portfolio/methodist.png";
+import ThinkRealityImg from "./assets/web-development-portfolio/think reality.png";
 
+// Import all images at the top (App Development)
+import DubaiTravelGuideImg from "./assets/app-development-portfolio/dubai travel guide.png";
+import EloraHairPalourImg from "./assets/app-development-portfolio/elora hair palour.png";
+import EvansFrancisImg from "./assets/app-development-portfolio/evans francis.png";
+import HouseOfDeliverenceImg from "./assets/app-development-portfolio/house of deliverence.png";
+import MybitsShopImg from "./assets/app-development-portfolio/mybitsshop.png";
+import NamazImg from "./assets/app-development-portfolio/namaz.png";
+import PoteaImg from "./assets/app-development-portfolio/potea.png";
+import RentopBikeAndCarImg from "./assets/app-development-portfolio/rentop bike and car.png";
 import logoImg from "./assets/logo/logo.png";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
@@ -489,60 +509,110 @@ export const allServices = [
   },
 ];
 
-// portfolio images (web development)
 export const webPortfolio = [
   {
     id: 1,
-    img: require("./assets/images/web_projects/1.webp"),
-    title: "FE-Finance",
+    img: FiveGHomesImg,
+    title: "5g Homes",
+    link: "https://5ghighspeedinternet.co",
   },
   {
     id: 2,
-    img: require("./assets/images/web_projects/2.webp"),
-    title: "Ocxee",
+    img: BayutImg,
+    title: "Bayut",
+    link: "https://www.bayut.com",
   },
   {
     id: 3,
-    img: require("./assets/images/web_projects/3.webp"),
-    title: "Leaderbridge",
+    img: ColdCreekcapImg,
+    title: "Cold Creekcap",
+    link: "https://www.coldcreekcap.com",
   },
   {
     id: 4,
-    img: require("./assets/images/web_projects/4.webp"),
-    title: "Gigzio",
+    img: EmergencyMusicImg,
+    title: "Emergency Music",
+    link: "https://www.figma.com/proto/GwlIMQuIuFevhOEp8moALy/emergence-music-distribuBon?page-id=6298%3A7215&type=design&node-id=6298-7776&viewport=407%2C314%2C0.11&t=QCtz7M4USn6gI1CG-1&scaling=min-zoom",
   },
   {
     id: 5,
-    img: require("./assets/images/web_projects/5.webp"),
-    title: "FE Group",
+    img: FlatiornImg,
+    title: "Flatiorn",
+    link: "",
   },
   {
     id: 6,
-    img: require("./assets/images/web_projects/6.webp"),
-    title: "V Talkz",
+    img: MavenImg,
+    title: "Maven",
+    link: "",
+  },
+  {
+    id: 7,
+    img: MenissaCateringsImg,
+    title: "Menissa Caterings",
+    link: "https://messinascatering.com",
+  },
+  {
+    id: 8,
+    img: MethodistImg,
+    title: "Methodist",
+    link: "",
+  },
+  {
+    id: 9,
+    img: ThinkRealityImg,
+    title: "Think Reality",
+    link: "https://thinkrealty.ae",
   },
 ];
 
-// portfolio images (app development)
 export const appPortfolio = [
   {
     id: 1,
-    img: require("./assets/images/app_projects/1.webp"),
-    title: "PartEx",
+    img: DubaiTravelGuideImg,
+    title: "Dubai Travel Guide",
+    link: "https://play.google.com/store/apps/details?id=com.eBps.dubai.travel.guide&pcampaignid=web_share",
   },
   {
     id: 2,
-    img: require("./assets/images/app_projects/2.webp"),
-    title: "Find A Driver",
+    img: EloraHairPalourImg,
+    title: "Elora Hair Palour",
+    link: "https://play.google.com/store/apps/details?id=app.barbera.io&pcampaignid=web_share",
   },
   {
     id: 3,
-    img: require("./assets/images/app_projects/3.webp"),
-    title: "Artisan Express",
+    img: EvansFrancisImg,
+    title: "Evans Francis",
+    link: "https://play.google.com/store/apps/details?id=com.chrisBanappdevelopers.evansfrancis&pcampaignid=web_share",
   },
   {
     id: 4,
-    img: require("./assets/images/app_projects/4.webp"),
-    title: "House of Deliverance",
+    img: HouseOfDeliverenceImg,
+    title: "House of Deliverence",
+    link: "https://play.google.com/store/apps/details?id=com.chrisBanappdevelopers.hod&pcampaignid=web_share",
+  },
+  {
+    id: 5,
+    img: MybitsShopImg,
+    title: "Mybits Shop",
+    link: "https://play.google.com/store/apps/details?id=com.klikomics.android&pcampaignid=web_share",
+  },
+  {
+    id: 6,
+    img: NamazImg,
+    title: "Namaz",
+    link: "https://play.google.com/store/apps/details?id=com.iccbrossard.prayerBmes&pcampaignid=web_share",
+  },
+  {
+    id: 7,
+    img: PoteaImg,
+    title: "Potea",
+    link: "https://play.google.com/store/apps/details?id=com.Zigna.AutoSnap&pcampaignid=web_share",
+  },
+  {
+    id: 8,
+    img: RentopBikeAndCarImg,
+    title: "Rentop Bike and Car",
+    link: "https://play.google.com/store/apps/details?id=com.rentop&pcampaignid=web_share",
   },
 ];
