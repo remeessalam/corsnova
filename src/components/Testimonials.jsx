@@ -70,7 +70,7 @@ const Testimonials = () => {
       <div className="wrapper flex flex-col items-center gap-5">
         <SubHeading heading="Our Testimonials" />
         <h2
-          className="heading-2 max-w-[60rem] mx-auto text-white mb-2 text-center"
+          className="heading-2 max-w-[60rem] mx-auto text-black mb-2 text-center"
           data-aos="fade-up"
         >
           What They Say About Us

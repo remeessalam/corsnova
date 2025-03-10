@@ -14,8 +14,8 @@ import { Helmet } from "react-helmet";
 
 const WebsiteFooter = () => {
   return (
-    <div className="py-[3rem]">
-      <div className="wrapper flex lg:flex-row flex-col gap-7 sm:gap-14 justify-between">
+    <div className="py-[3rem] bg-gray-600">
+      <div className="wrapper flex lg:flex-row flex-col gap-7 sm:gap-14 justify-between ">
         <div className="">
           <Helmet>
             {/* Preload the logo image */}
@@ -28,7 +28,7 @@ const WebsiteFooter = () => {
             className="w-[10rem] object-contain"
             alt="logo"
           />
-          <p className="desc text-sm max-w-[22rem] mt-3">
+          <p className="desc !text-white text-sm max-w-[22rem] mt-3">
             Our innovative solutions are designed not just to meet the demands
             of today but to anticipate the challenges of tomorrow, ensuring that
             your business stays ahead of the curve.
@@ -37,21 +37,21 @@ const WebsiteFooter = () => {
             <Link
               aria-label="Contact us on Instagram"
               to={companyDetails.instagram}
-              className="w-[2rem] h-[2rem] rounded-full p-2 bg-[#0788AE] hover:bg-tertiary hover:-translate-y-1 transition-all duration-300 flex justify-center items-center"
+              className="w-[2rem] h-[2rem] rounded-full p-2 bg-black hover:bg-tertiary hover:-translate-y-1 transition-all duration-300 flex justify-center items-center"
             >
               <Instagram strokeWidth={1.5} size={20} />
             </Link>
             <Link
               aria-label="Contact us on Twitter"
               to={companyDetails.twitter}
-              className="w-[2rem] h-[2rem] rounded-full p-2 bg-[#0788AE] hover:bg-tertiary hover:-translate-y-1 transition-all duration-300 flex justify-center items-center"
+              className="w-[2rem] h-[2rem] rounded-full p-2 bg-black hover:bg-tertiary hover:-translate-y-1 transition-all duration-300 flex justify-center items-center"
             >
               <Twitter strokeWidth={1.5} size={20} />
             </Link>
             <Link
               aria-label="Contact us on LinkedIn"
               to={companyDetails.linkedin}
-              className="w-[2rem] h-[2rem] rounded-full p-2 bg-[#0788AE] hover:bg-tertiary hover:-translate-y-1 transition-all duration-300 flex justify-center items-center"
+              className="w-[2rem] h-[2rem] rounded-full p-2 bg-black hover:bg-tertiary hover:-translate-y-1 transition-all duration-300 flex justify-center items-center"
             >
               <Linkedin strokeWidth={1.5} size={20} />
             </Link>

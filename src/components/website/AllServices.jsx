@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { allServices } from "../../constant";
 import SubHeading from "../SubHeading";
 import Drawer from "react-modern-drawer";
-import { X } from "lucide-react";
+import { Link, X } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const AllServices = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedService, setSelectedService] = useState(allServices[0]);
-
+  const navigate = useNavigate();
   const handleSelectServiceToShowDetail = (service) => {
     setSelectedService(service);
     setIsOpen(true);
@@ -17,7 +18,7 @@ const AllServices = () => {
       <SubHeading heading="Our Services" />
       <h2
         data-aos="fade-up"
-        className="heading-2 max-w-[60rem] mx-auto text-center"
+        className="heading-2 max-w-[60rem] mx-auto text-center text-black"
       >
         From Concept to Reality: Building Tomorrow's Solutions Today
       </h2>
@@ -25,23 +26,32 @@ const AllServices = () => {
         {allServices.map((service) => (
           <div
             data-aos="fade-up"
-            className="bg-tertiary rounded-lg p-5 flex text-center flex-col justify-between"
+            className="bg-black group  hover:bg-primary rounded-lg p-5 flex text-center flex-col justify-between"
           >
             <div className="flex flex-col items-center">
-              <img
+              <service.icon
+                size={50}
+                className="h-[3.5rem] md:h-[5rem]  grayscale"
+              />
+              {/* <img
                 loading="lazy"
                 src={service.icon}
                 width="75"
                 height="75"
-                className="h-[3.5rem] md:h-[4rem] object-contain"
+                className="h-[3.5rem] md:h-[4rem] object-contain grayscale"
                 alt=""
-              />
-              <h6 className="text-xl font-medium mt-2">{service.title}</h6>
-              <p className="desc mt-2">{service.description}</p>
+              /> */}
+              <h6 className="text-xl font-medium mt-2 group-hover:text-black">
+                {service.title}
+              </h6>
+              <p className="text-sm md:text-base font-light mt-2 text-white group-hover:text-black">
+                {service.description}
+              </p>
             </div>
             <button
-              onClick={() => handleSelectServiceToShowDetail(service)}
-              className="primary-btn mt-5 w-fit mx-auto"
+              onClick={() => navigate(service.link)}
+              // to={service.link}
+              className="primary-btn mt-5 w-fit mx-auto !text-black"
             >
               Learn More
             </button>

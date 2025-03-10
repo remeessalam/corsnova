@@ -51,14 +51,14 @@ const WhyChooseUs = () => {
       className="py-[5rem] relative bg-center bg-cover min-h-[50vh]"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
-      <div className="absolute top-0 w-full h-full bg-secondary/90"></div>
+      <div className="absolute top-0 w-full h-full bg-black/60"></div>
       <div data-aos="fade-up" className="max-w-7xl mx-auto">
         <div
           className="mx-5 rounded-xl bg-center bg-cover relative"
           style={{ backgroundImage: `url(${bannerImg})` }}
         >
           <div className="absolute top-0 w-full h-full bg-secondary/50"></div>
-          <div className="py-[3rem] px-5 bg-primary/70 rounded-xl text-white relative z-10">
+          <div className="py-[3rem] px-5 bg-black/70 rounded-xl text-white relative z-10">
             <h1
               data-aos="fade-up"
               className="heading-2 max-w-[60rem] mx-auto text-center"
@@ -72,7 +72,7 @@ const WhyChooseUs = () => {
               {content.map((item, index) => (
                 <div
                   key={index}
-                  className="flex flex-col group items-center gap-3 bg-gradient-to-b from-[#179CC4] to-[#0f4a5d] rounded-xl p-5 transition-all duration-200"
+                  className="flex flex-col group items-center gap-3 bg-gradient-to-b from-black to-gray-800 rounded-xl p-5 transition-all duration-200"
                 >
                   <item.icon className="w-[3.5rem] fill-white h-[3.5rem] transition-all duration-200" />
                   <p className="text-center">{item.title}</p>

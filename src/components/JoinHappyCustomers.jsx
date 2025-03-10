@@ -55,7 +55,7 @@ const JoinHappyCustomers = () => {
       className="py-[5rem] bg-center bg-cover relative text-white"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
-      <div className="absolute top-0 w-full h-full bg-tertiary/95"></div>
+      <div className="absolute top-0 w-full h-full bg-black/75"></div>
       <div className="relative z-10">
         <div data-aos="fade-up" className="wrapper">
           <h2 className="heading-2 max-w-[60rem] mx-auto text-center">
@@ -74,7 +74,7 @@ const JoinHappyCustomers = () => {
                 loading="lazy"
                 src={img}
                 alt="featured in"
-                className="object-contain"
+                className="object-contain rounded-2xl"
               />
             </div>
           ))}

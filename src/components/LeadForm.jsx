@@ -64,7 +64,7 @@ const LeadForm = () => {
   };
   return (
     <div className="flex flex-col gap-5 py-[5rem]">
-      <h2 data-aos="fade-up" className="heading-2 text-center">
+      <h2 data-aos="fade-up" className="heading-2 text-center !text-black">
         Connect With Us Today!
       </h2>
       <p data-aos="fade-up" className="desc text-center max-w-[55rem] mx-auto">
@@ -75,14 +75,14 @@ const LeadForm = () => {
       <form
         onSubmit={handleSubmit(handleFormSubmit)}
         data-aos="fade-up"
-        className="flex flex-col w-full gap-4 rounded-xl p-5 bg-tertiary max-w-3xl mx-auto mt-5"
+        className="flex flex-col w-full gap-4 rounded-xl p-5 bg-black max-w-3xl mx-auto mt-5"
       >
         <div className="grid sm:grid-cols-2 gap-5">
           <div className="flex flex-col gap-1">
             <label className="text-sm ml-2">Name</label>
             <input
               type="text"
-              className="outline-none p-2 rounded-full bg-white/60 text-secondary"
+              className="outline-none p-2 rounded-full bg-white/60 text-secondary placeholder:text-slate-300"
               placeholder="Name"
               {...register("name", {
                 required: "Full name is required",
@@ -101,7 +101,7 @@ const LeadForm = () => {
             <label className="text-sm ml-2">Email</label>
             <input
               type="email"
-              className="outline-none p-2 rounded-full bg-white/60 text-secondary"
+              className="outline-none p-2 rounded-full bg-white/60 text-secondary placeholder:text-slate-300 "
               placeholder="Email"
               {...register("email", {
                 required: "Email is required",
@@ -119,7 +119,7 @@ const LeadForm = () => {
             <label className="text-sm ml-2">Phone</label>
             <input
               type="tel"
-              className="outline-none p-2 rounded-full bg-white/60 text-secondary"
+              className="outline-none p-2 rounded-full bg-white/60 text-secondary placeholder:text-slate-300"
               placeholder="Phone Number"
               {...register("phone", {
                 required: "Phone number is required",
@@ -135,7 +135,7 @@ const LeadForm = () => {
             <label className="text-sm ml-2">Subject</label>
             <input
               type="text"
-              className="outline-none p-2 rounded-full bg-white/60 text-secondary"
+              className="outline-none p-2 rounded-full bg-white/60 text-secondary placeholder:text-slate-300"
               placeholder="Subject"
               {...register("subject", {
                 required: "Subject is required",
@@ -155,7 +155,7 @@ const LeadForm = () => {
           <label className="text-sm ml-2">Message</label>
           <textarea
             rows="4"
-            className="outline-none p-2 rounded-2xl bg-white/60 text-secondary"
+            className="outline-none p-2 rounded-2xl bg-white/60 text-secondary placeholder:text-slate-300"
             placeholder="Message"
             {...register("message", {
               required: "Message is required",

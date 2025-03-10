@@ -1,3 +1,18 @@
+import {
+  Code,
+  Smartphone,
+  BrainCircuit,
+  BrainCog,
+  MessageCircle,
+  Cpu,
+  BarChart2,
+  Layers,
+  Briefcase,
+  Cloud,
+  PenTool,
+  PencilRuler,
+} from "lucide-react";
+
 import logoImg from "./assets/logo/logo.png";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
@@ -102,34 +117,6 @@ export const appDevelopmentServices = [
   },
 ];
 
-// portfolio
-// export const portfolio = [
-//   {
-//     id: 1,
-//     title: "Figo Tech",
-//     img: require("./assets/images/portfolio/1.jpeg"),
-//     imgFit: "object-cover",
-//   },
-//   {
-//     id: 2,
-//     title: "News Feed",
-//     img: require("./assets/images/portfolio/2.jpeg"),
-//     imgFit: "object-cover",
-//   },
-//   {
-//     id: 3,
-//     title: "Food Application",
-//     img: require("./assets/images/portfolio/3.png"),
-//     imgFit: "object-contain",
-//   },
-//   {
-//     id: 4,
-//     title: "Crio Load App",
-//     img: require("./assets/images/portfolio/4.jpg"),
-//     imgFit: "object-cover",
-//   },
-// ];
-
 // testimonials
 export const testimonials = [
   {
@@ -159,84 +146,346 @@ export const testimonials = [
 export const allServices = [
   {
     id: 1,
-    title: "Web Development",
+    title: "Website Development (Full Stack)",
+    icon: Code,
     description:
       "Our full-stack development services provide end-to-end solutions, combining front-end and back-end expertise for a future-proof digital presence.",
-    icon: require("./assets/images/icons/webdev.png"),
-    detailContent:
-      "In today's interconnected world, website applications have become an integral part of our daily lives. From e-commerce platforms to social media networks, from educational resources to government services, these digital tools have revolutionized the way we interact, communicate, and conduct business. The development of website applications is a complex process that involves a blend of creativity, technical expertise, and a deep understanding of user needs. \n\n At the core of website application development lies the interplay of front-end and back-end development. The front-end, or client-side, is what the user sees and interacts with. It encompasses the design, layout, and functionality of the website's interface. Popular front-end technologies include HTML, CSS, and JavaScript frameworks like React, Angular, and Vue.js. These tools enable developers to create visually appealing and intuitive user experiences.",
+    link: "/services/website-development",
+    additionalDetails: {
+      overview:
+        "In today's interconnected world, website applications have become an integral part of our daily lives. From e-commerce platforms to social media networks, these digital tools have revolutionized the way we interact, communicate, and conduct business. Website development involves a blend of creativity, technical expertise, and an understanding of user needs.",
+      services: [
+        {
+          title: "Front-end Development",
+          description:
+            "Building responsive and interactive user interfaces using modern frameworks like React, Angular, and Vue.js.",
+        },
+        {
+          title: "Back-end Development",
+          description:
+            "Developing robust and scalable server-side applications with technologies like Node.js, Django, and Ruby on Rails.",
+        },
+        {
+          title: "Full-stack Development",
+          description:
+            "Integrating both front-end and back-end expertise to deliver complete digital solutions.",
+        },
+      ],
+    },
   },
   {
     id: 2,
-    title: "Mobile App Development",
+    title: "Mobile App Development (Android and iOS)",
+    icon: Smartphone,
     description:
-      "Achieve Mobile Supremacy through Custom App Development Solutions that Combine User- Centric Design, Seamless Functionality, and Sustainable Business Growth.",
-    icon: require("./assets/images/icons/appdev.png"),
-    detailContent:
-      "One of the key differences between mobile and web app development is the platform-specific nature of mobile apps. While web apps can be accessed on any device with a web browser, mobile apps are designed for specific platforms, such as iOS and Android. This necessitates developing separate versions for each platform, often using different programming languages and development environments.\n\nPerformance is another critical factor in mobile app development. With limited processing power and battery life, mobile devices demand optimized apps that run smoothly and efficiently. Developers must carefully consider factors such as memory usage, network connectivity, and power consumption to ensure a positive user experience.",
+      "We build high-performance mobile applications for Android and iOS, ensuring seamless user experience and cutting-edge functionality.",
+    link: "/services/mobile-app-development",
+    additionalDetails: {
+      overview:
+        "Mobile applications have transformed the way we interact with technology. Developing a mobile app involves understanding user behavior, selecting the right technology stack, and ensuring high performance across various devices.",
+      services: [
+        {
+          title: "Android Development",
+          description:
+            "Creating powerful and scalable Android applications using Kotlin, Java, and Jetpack components.",
+        },
+        {
+          title: "iOS Development",
+          description:
+            "Building smooth and engaging iOS applications using Swift, Objective-C, and the latest Apple frameworks.",
+        },
+        {
+          title: "Cross-platform Development",
+          description:
+            "Leveraging frameworks like React Native and Flutter to develop apps for both Android and iOS.",
+        },
+      ],
+    },
   },
   {
     id: 3,
-    title: "Cloud Migration Services",
+    title: "Artificial Intelligence Development and Integration",
+    icon: BrainCircuit,
     description:
-      "Seamlessly transition your business to the cloud with expert migration strategies that minimize risk and maximize performance.",
-    icon: require("./assets/images/icons/cloud.png"),
-    detailContent:
-      "One of the primary drivers of cloud migration is the need for scalability. Traditional on-premises infrastructure can be inflexible, making it difficult to accommodate rapid growth or fluctuating workloads. Cloud platforms, on the other hand, offer virtually unlimited scalability, allowing businesses to easily adjust their resources to meet changing demands. This flexibility can significantly reduce costs and improve operational efficiency.\n\nCost-effectiveness is another compelling reason for organizations to consider cloud migration. Cloud providers often offer pay-as-you-go pricing models, which can result in significant cost savings compared to the upfront investments required for on-premises infrastructure. Additionally, cloud platforms can help reduce IT operational costs by automating routine tasks and eliminating the need for on-premises data centers.",
+      "Leverage AI to drive innovation and automate processes for your business.",
+    link: "/services/ai-development",
+    additionalDetails: {
+      overview:
+        "Artificial Intelligence is revolutionizing industries by providing intelligent solutions that adapt to business needs. Our AI services integrate advanced algorithms and machine learning to optimize operations.",
+      services: [
+        {
+          title: "AI Strategy Consulting",
+          description:
+            "Guiding your business on how to leverage AI effectively.",
+        },
+        {
+          title: "Machine Learning Integration",
+          description:
+            "Implementing machine learning models for predictive analytics and automation.",
+        },
+        {
+          title: "AI-powered Automation",
+          description:
+            "Streamlining processes through intelligent automation solutions.",
+        },
+      ],
+    },
   },
   {
     id: 4,
-    title: "AI Development",
+    title: "Generative AI Applications",
+    icon: BrainCog,
     description:
-      "Unlock Next-Gen Customer Experience with Expertly Crafted Conversational AI ",
-    icon: require("./assets/images/icons/ai.png"),
-    detailContent:
-      "At the heart of AI development is the creation of algorithms and models that enable machines to learn from data and improve their performance over time. Machine learning, a subset of AI, involves training algorithms on large datasets to recognize patterns, make predictions, and automate tasks. Deep learning, a more advanced form of machine learning, utilizes artificial neural networks to process complex data and learn from it.\n\nAI development has a wide range of applications across various domains. In healthcare, AI is being used to diagnose diseases, develop new treatments, and personalize patient care. In finance, AI-powered systems are used for fraud detection, risk assessment, and algorithmic trading. In manufacturing, AI is driving automation, improving efficiency, and enhancing product quality.",
+      "Innovate with generative AI to create dynamic, creative solutions for content, design, and more.",
+    link: "/services/generative-ai",
+    additionalDetails: {
+      overview:
+        "Generative AI harnesses the power of advanced algorithms to produce unique content and streamline creative processes, enabling innovative solutions in various industries.",
+      services: [
+        {
+          title: "Content Generation",
+          description: "Automating content creation for marketing and media.",
+        },
+        {
+          title: "Design Automation",
+          description:
+            "Enhancing creative workflows with AI-driven design tools.",
+        },
+        {
+          title: "Creative Tool Integration",
+          description:
+            "Integrating generative AI tools to boost creative productivity.",
+        },
+      ],
+    },
   },
   {
     id: 5,
-    title: "Data Science Services",
+    title: "Chatbot Development / AI Calling",
+    icon: MessageCircle,
     description:
-      "Accelerate Business Growth and Unlock New Revenue Streams with Our Expert Data Science Solutions.",
-    icon: require("./assets/images/icons/datascience.png"),
-    detailContent:
-      "At the core of data science services lies the ability to collect, clean, and prepare data for analysis. Data scientists employ a variety of techniques to ensure data quality and reliability, including data cleansing, normalization, and feature engineering. Once the data is prepared, it can be subjected to statistical analysis, machine learning algorithms, and other data mining techniques to uncover meaningful patterns and trends.\n\nOne of the key benefits of data science services is the ability to make data-driven decisions. By analyzing vast amounts of data, businesses can gain valuable insights into customer behavior, market trends, and operational efficiency. Data science services also play a crucial role in driving innovation. By leveraging advanced analytics techniques, businesses can develop new products and services, identify emerging opportunities, and stay ahead of the competition. Additionally, data science can be used to create predictive models that can forecast future trends and anticipate risks.",
+      "Implement intelligent chatbot solutions and AI-driven calling systems to enhance customer engagement.",
+    link: "/services/chatbot-development",
+    additionalDetails: {
+      overview:
+        "Chatbots are transforming customer service by providing 24/7 support and personalized interaction, enhancing engagement and operational efficiency.",
+      services: [
+        {
+          title: "Chatbot Design",
+          description: "Creating intuitive and engaging chatbot interfaces.",
+        },
+        {
+          title: "AI Voice Integration",
+          description:
+            "Incorporating voice recognition for seamless user interaction.",
+        },
+        {
+          title: "Conversational UI",
+          description: "Designing natural and efficient conversation flows.",
+        },
+      ],
+    },
   },
   {
     id: 6,
-    title: "IT Consulting & Strategy",
+    title: "Custom Software Development",
+    icon: PencilRuler,
     description:
-      "Connect IT and Business for Unparalleled Success with Our Expert Consulting, Aligning IT Infrastructure with Business Goals.",
-    icon: require("./assets/images/icons/itconsulting.png"),
-    detailContent:
-      "One of the primary roles of IT consulting firms is to help businesses align their IT strategies with their overall business objectives. By conducting thorough assessments and analyses, consultants can identify areas for improvement and recommend solutions that optimize efficiency, reduce costs, and enhance competitiveness. This may involve implementing new technologies, upgrading existing systems, or restructuring IT operations.\n\nIT consulting firms also play a vital role in addressing the security challenges faced by businesses today. In an increasingly interconnected world, protecting sensitive data from cyber threats is crucial. Consultants can help organizations assess their security vulnerabilities, implement robust security measures, and develop incident response plans to minimize the impact of potential breaches.",
+      "Tailored software solutions designed to meet the unique needs of your business.",
+    link: "/services/custom-software-development",
+    additionalDetails: {
+      overview:
+        "Custom software development allows businesses to build solutions that precisely match their operational requirements and drive competitive advantage.",
+      services: [
+        {
+          title: "Bespoke Application Development",
+          description:
+            "Developing custom applications tailored to your business processes.",
+        },
+        {
+          title: "System Integration",
+          description:
+            "Integrating disparate systems into a cohesive solution.",
+        },
+        {
+          title: "Maintenance & Support",
+          description:
+            "Providing ongoing support and updates for your software.",
+        },
+      ],
+    },
   },
   {
     id: 7,
-    title: "Chatbot Development",
+    title: "Machine Learning Solutions",
+    icon: Cpu,
     description:
-      "Chatbots to Re-define Customer Interaction, Drive Revenue, and Future-Proof Your Business.",
-    icon: require("./assets/images/icons/chatbot.png"),
-    detailContent:
-      "Chatbots are powered by natural language processing (NLP), a field of artificial intelligence that enables machines to understand and interpret human language. NLP techniques allow chatbots to process and analyze text, extract meaning, and generate appropriate responses. This capability has led to the development of chatbots that can engage in meaningful conversations, answer questions, and even provide personalized recommendations.\n\nOne of the primary benefits of chatbots is their ability to improve customer service. By automating routine tasks and providing immediate responses to customer inquiries, chatbots can reduce wait times, enhance customer satisfaction, and free up human agents to handle more complex issues. Additionally, chatbots can be used to collect customer feedback and insights, helping businesses to identify areas for improvement and tailor their offerings to meet customer needs.",
+      "Deploy machine learning models that drive predictive analytics and intelligent decision-making.",
+    link: "/services/machine-learning",
+    additionalDetails: {
+      overview:
+        "Machine Learning enables systems to learn from data, providing insights and automation for better decision-making across various business functions.",
+      services: [
+        {
+          title: "Model Development",
+          description:
+            "Creating and training machine learning models tailored to your data.",
+        },
+        {
+          title: "Predictive Analytics",
+          description: "Leveraging data to forecast trends and outcomes.",
+        },
+        {
+          title: "Data Integration",
+          description:
+            "Integrating machine learning with your existing data infrastructure.",
+        },
+      ],
+    },
   },
   {
     id: 8,
-    title: "Data Analytics & Business Intelligence",
+    title: "Data Analytics and Data Science",
+    icon: BarChart2,
     description:
-      "Our cutting-edge analytics and Business Intelligence capabilities distil complex data in to clear, actionable insights.",
-    icon: require("./assets/images/icons/dataanalytics.png"),
-    detailContent:
-      "Data analytics involves the process of examining data to uncover patterns, trends, and insights. It encompasses a wide range of techniques, including statistical analysis, machine learning, and data mining. By applying these methods to large datasets, organizations can extract valuable information that can be used to inform decision-making.\n\nBusiness intelligence, on the other hand, focuses on providing actionable insights to support strategic decision-making. BI tools and platforms enable organizations to collect, store, and analyze data from various sources, transforming raw data into meaningful information that can be easily understood and visualized.",
+      "Transform raw data into actionable insights with advanced analytics and data science methodologies.",
+    link: "/services/data-analytics",
+    additionalDetails: {
+      overview:
+        "Data analytics and data science combine statistical analysis with modern technology to uncover hidden patterns and drive strategic decision-making.",
+      services: [
+        {
+          title: "Data Visualization",
+          description: "Turning complex data into clear, visual insights.",
+        },
+        {
+          title: "Statistical Analysis",
+          description:
+            "Applying rigorous statistical methods to interpret data.",
+        },
+        {
+          title: "Big Data Solutions",
+          description:
+            "Managing and analyzing large volumes of data efficiently.",
+        },
+      ],
+    },
   },
   {
     id: 9,
-    title: "Natural Language Processing (NLP)",
+    title: "Blockchain Development",
+    icon: Layers,
     description:
-      "Our advanced NLP capabilities empower applications to decipher, analyze, and respond to human language.",
-    icon: require("./assets/images/icons/nlp.png"),
-    detailContent:
-      "NLP has a wide range of applications across various domains. In customer service, chatbots and virtual assistants powered by NLP can provide immediate responses to customer inquiries and automate routine tasks. In healthcare, NLP can be used to analyze medical records, extract information from clinical notes, and assist in drug discovery. In the legal field, NLP can be used to automate document review, extract key information from legal contracts, and provide legal research assistance.\n\nAs NLP technology continues to advance, we can expect to see even more innovative applications emerging. For example, NLP-powered systems could be used to create intelligent personal assistants that can understand our needs and preferences, or to develop more accurate and natural-sounding language translation tools.However, the development of NLP is not without its challenges. Issues such as bias, privacy, and ethical considerations must be carefully addressed.",
+      "Implement secure and transparent blockchain solutions to revolutionize your business processes.",
+    link: "/services/blockchain-development",
+    additionalDetails: {
+      overview:
+        "Blockchain technology provides decentralized and immutable solutions that enhance security and foster trust in digital transactions, transforming traditional business models.",
+      services: [
+        {
+          title: "Smart Contract Development",
+          description:
+            "Developing self-executing contracts with the terms directly written into code.",
+        },
+        {
+          title: "Decentralized Applications",
+          description:
+            "Building applications that run on decentralized networks.",
+        },
+        {
+          title: "Blockchain Integration",
+          description:
+            "Integrating blockchain technology into your existing systems.",
+        },
+      ],
+    },
+  },
+  {
+    id: 10,
+    title: "IT Consulting and Strategy",
+    icon: Briefcase,
+    description:
+      "Expert IT consulting to align your technology strategy with your business goals.",
+    link: "/services/it-consulting",
+    additionalDetails: {
+      overview:
+        "Our IT consulting services provide strategic guidance and expert insights to optimize your technology investments and drive business growth.",
+      services: [
+        {
+          title: "Technology Assessment",
+          description:
+            "Evaluating your current IT infrastructure and identifying areas for improvement.",
+        },
+        {
+          title: "Strategic Planning",
+          description:
+            "Developing a roadmap that aligns technology with your business objectives.",
+        },
+        {
+          title: "Implementation Roadmaps",
+          description:
+            "Providing clear steps to achieve your IT strategy effectively.",
+        },
+      ],
+    },
+  },
+  {
+    id: 11,
+    title: "Cloud Migration Services",
+    icon: Cloud,
+    description:
+      "Seamlessly migrate your infrastructure to the cloud for scalability and efficiency.",
+    link: "/services/cloud-migration",
+    additionalDetails: {
+      overview:
+        "Cloud migration is critical for modern businesses seeking to enhance agility, reduce costs, and improve scalability by leveraging cloud technologies.",
+      services: [
+        {
+          title: "Infrastructure Assessment",
+          description:
+            "Evaluating your current infrastructure for cloud readiness.",
+        },
+        {
+          title: "Migration Planning",
+          description:
+            "Developing a strategic plan to move your systems to the cloud.",
+        },
+        {
+          title: "Cloud Integration",
+          description:
+            "Ensuring smooth integration of cloud services with your existing systems.",
+        },
+      ],
+    },
+  },
+  {
+    id: 12,
+    title: "UI/UX Designing",
+    icon: PenTool,
+    description:
+      "Design engaging user interfaces and experiences that captivate your audience.",
+    link: "/services/ui-ux-designing",
+    additionalDetails: {
+      overview:
+        "UI/UX design is essential for creating intuitive and visually appealing digital products that deliver exceptional user experiences.",
+      services: [
+        {
+          title: "User Research",
+          description:
+            "Conducting research to understand user needs and behaviors.",
+        },
+        {
+          title: "Wireframing & Prototyping",
+          description:
+            "Creating blueprints and prototypes to visualize the design.",
+        },
+        {
+          title: "Visual Design",
+          description:
+            "Crafting visually compelling designs that resonate with users.",
+        },
+      ],
+    },
   },
 ];
 

@@ -17,7 +17,7 @@ const Portfolio = ({ page }) => {
       <SubHeading heading="Our Portfolio" />
       <h2
         data-aos="fade-up"
-        className="heading-2 max-w-[60rem] mx-auto text-center"
+        className="heading-2 max-w-[60rem] mx-auto text-center !text-black"
       >
         Work Speaks Volumes: Discover Our Projects
       </h2>

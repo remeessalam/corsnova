@@ -1,7 +1,6 @@
+import { Code, Smartphone, BrainCircuit } from "lucide-react";
 import React from "react";
-import icon1 from "../assets/images/Vector.png";
-import icon2 from "../assets/images/Vector(1).png";
-import icon3 from "../assets/images/Vector(2).png";
+
 import bannerImg from "../assets/images/banner.webp";
 import aboutImg from "../assets/images/aboutus-img3.webp";
 import { Link } from "react-router-dom";
@@ -30,6 +29,27 @@ const WhyChooseUs = React.lazy(() => import("../components/WhyChooseUs"));
 const LeadForm = React.lazy(() => import("../components/LeadForm"));
 
 const Home = () => {
+  const services = [
+    {
+      icon: <Code size={50} />, // Lucide icon for Web Development
+      title: "Web Development",
+      description:
+        "Build responsive, scalable, and high-performance web applications.",
+    },
+    {
+      icon: <Smartphone size={50} />, // Lucide icon for Mobile Development
+      title: "Mobile Development",
+      description:
+        "Create seamless and engaging mobile applications for all platforms.",
+    },
+    {
+      icon: <BrainCircuit size={50} />, // Lucide icon for AI Development
+      title: "AI Development",
+      description:
+        "Leverage AI to drive innovation and automate processes efficiently.",
+    },
+  ];
+
   return (
     <>
       <WebsiteHeader />
@@ -74,63 +94,24 @@ const Home = () => {
         data-aos="fade-up"
         className="md:-mt-[7rem] py-[2rem] relative z-10 max-w-6xl mx-auto px-6 grid sm:grid-cols-2 md:grid-cols-3 gap-5"
       >
-        <div className="bg-[#0A1828] rounded-lg p-5">
-          <div className="flex gap-3 mb-4">
-            <img
-              loading="lazy"
-              src={icon1}
-              width="50"
-              height="50"
-              className="w-[3rem] object-contain"
-              alt=""
-            />
-            <p className="text-lg leading-tight font-medium">
-              Mobile Application Development
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className="bg-black group hover:bg-primary rounded-lg p-5"
+          >
+            <div className="flex gap-3 mb-4">
+              {service.icon}
+              <p className="text-lg leading-tight font-medium group-hover:text-black">
+                {service.title}
+              </p>
+            </div>
+            <p className="desc !text-white group-hover:text-black">
+              {service.description}
             </p>
           </div>
-          <p className="desc">
-            Achieve Mobile Supremacy through Custom App Development Solutions
-          </p>
-        </div>
-        <div className="bg-[#0A1828] rounded-lg p-5">
-          <div className="flex items-center gap-3 mb-4">
-            <img
-              loading="lazy"
-              src={icon2}
-              width="50"
-              height="50"
-              className="w-[3rem] object-contain"
-              alt=""
-            />
-            <p className="text-lg leading-tight font-medium">
-              IT Consulting & Strategy
-            </p>
-          </div>
-          <p className="desc">
-            Connect IT and Business for Unparalleled Success with Our Expert
-            Consulting, Aligning IT and Growth
-          </p>
-        </div>
-        <div className="bg-tertiary rounded-lg p-5">
-          <div className="flex gap-3 mb-4">
-            <img
-              loading="lazy"
-              src={icon3}
-              width="50"
-              height="50"
-              className="w-[3rem] object-contain"
-              alt=""
-            />
-            <p className="text-lg leading-tight font-medium">
-              Website Application Development
-            </p>
-          </div>
-          <p className="desc">
-            Our full-stack development services provideend - to -end solutions
-          </p>
-        </div>
+        ))}
       </div>
-      <section className="text-white wrapper py-[3rem]">
+      <section className="text-black wrapper py-[3rem]">
         <div className="grid lg:grid-cols-2 gap-10 mt-7">
           <div data-aos="fade-up" className="hidden lg:block h-full">
             <img

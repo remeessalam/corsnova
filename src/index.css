@@ -10,7 +10,7 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #060f1a;
+  background-color: #ffffff;
   color: #ffffff;
   margin: 0;
   padding: 0;
@@ -47,10 +47,10 @@ html {
     @apply text-[2.25rem] md:text-[2.5rem] font-medium leading-tight;
   }
   .sub-heading {
-    @apply text-[1.25rem] md:text-[1.5rem] font-light leading-tight text-white/80;
+    @apply text-[1.25rem] md:text-[1.5rem] font-light leading-tight text-black/80;
   }
   .desc {
-    @apply text-sm md:text-base font-light text-white/80;
+    @apply text-sm md:text-base font-light text-black/80;
   }
   .active-link {
     @apply text-primary font-medium;

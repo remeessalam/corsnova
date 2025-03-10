@@ -5,7 +5,7 @@ import SubHeading from "../SubHeading";
 
 const OurValue = () => {
   return (
-    <section className="bg-tertiary/95 py-[5rem]">
+    <section className="bg-black py-[5rem]">
       <div className="wrapper grid md:grid-cols-2 items-center gap-7">
         <div className="flex flex-col items-start gap-5">
           <SubHeading heading="Our Values" />
@@ -13,17 +13,17 @@ const OurValue = () => {
             Integrity at Our Core,
             <br /> Innovation in Our Spirit
           </h2>
-          <p data-aos="fade-up" className="desc">
+          <p data-aos="fade-up" className="desc !text-white">
             Our diverse expertise spans multiple industries, empowering
             businesses of all sizes to harness the transformative power of AI
             and unlock invaluable data-driven insights.
           </p>
           <div data-aos="fade-up" className="flex gap-5 mt-2">
-            <div className="min-w-[4rem] h-[4rem] bg-primary rounded-full flex items-center justify-center">
+            <div className="min-w-[4rem] h-[4rem] bg-primary/50 rounded-full flex items-center justify-center">
               <img
                 loading="lazy"
                 src={ourValuesIcon1}
-                className="w-[2rem] object-contain"
+                className="w-[2rem] object-contain grayscale"
                 alt=""
               />
             </div>
@@ -35,11 +35,11 @@ const OurValue = () => {
             </div>
           </div>
           <div data-aos="fade-up" className="flex gap-5">
-            <div className="min-w-[4rem] h-[4rem] bg-primary rounded-full flex items-center justify-center">
+            <div className="min-w-[4rem] h-[4rem] bg-primary/50 rounded-full flex items-center justify-center">
               <img
                 loading="lazy"
                 src={ourValuesIcon2}
-                className="w-[2rem] object-contain"
+                className="w-[2rem] object-contain grayscale"
                 alt=""
               />
             </div>
@@ -78,7 +78,7 @@ const OurValue = () => {
           </div>
           <div className="flex flex-col gap-2">
             <div className="flex justify-between gap-4">
-              <p className="font-medium">Cloud Migration Services</p>
+              <p className="font-medium">Artificial Intelligence Development</p>
               <p className="font-medium">92%</p>
             </div>
             <div className="w-full bg-white h-2 rounded-full overflow-hidden">
@@ -87,7 +87,7 @@ const OurValue = () => {
           </div>
           <div className="flex flex-col gap-2">
             <div className="flex justify-between gap-4">
-              <p className="font-medium">IT Consulting</p>
+              <p className="font-medium">IT Consulting And Strategy</p>
               <p className="font-medium">90%</p>
             </div>
             <div className="w-full bg-white h-2 rounded-full overflow-hidden">
