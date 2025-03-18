@@ -45,9 +45,11 @@ export const companyDetails = {
   phone: "+91 7425860950",
   address: "1502, Vista 2, Uniworld City, New Town Kolkata : 700156",
   email: "techteam@corsnova.com",
-  linkedin: "",
-  instagram: "",
+  linkedin: "https://www.linkedin.com/company/corsnova/?viewAsMember=true",
+  instagram:
+    "https://www.instagram.com/corsnova.ai?igsh=MmU2eGVkemcyeXNj&utm_source=qr",
   twitter: "",
+  facebook: "https://www.facebook.com/share/12G5WLcagFW/?mibextid=wwXIfr",
 };
 
 export const routes = [
