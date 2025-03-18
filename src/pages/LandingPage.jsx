@@ -7,6 +7,7 @@ import appDevAboutImg from "../assets/images/landingpage/app-dev-about.webp";
 import webDevAboutImg from "../assets/images/landingpage/web-dev-about.webp";
 import ReactPlayer from "react-player";
 import vid from "../assets/video/banner.mp4";
+import LeadForm from "../components/LeadForm";
 
 const LandingHeader = lazy(() =>
   import("../components/landingPages/LandingHeader")
@@ -52,7 +53,7 @@ const LandingPage = ({ page }) => {
               ? "Crafting High-Performance Websites that Drive Results"
               : "Innovation-Driven App Development Services"}
           </h1>
-          <p className="sub-heading">
+          <p className="sub-heading !text-white">
             AI Meets Integrity - Empowering Innovation with Intelligence
           </p>
         </div>
@@ -149,7 +150,7 @@ const LandingPage = ({ page }) => {
           {services.map((service) => (
             <div
               data-aos="fade-up"
-              className="bg-black items-center rounded-lg p-5 flex text-center flex-col"
+              className="bg-black group hover:bg-hovercolor shadowHover items-center rounded-lg p-5 flex text-center flex-col"
             >
               <img
                 loading="lazy"
@@ -159,8 +160,12 @@ const LandingPage = ({ page }) => {
                 width="100"
                 height="100"
               />
-              <h6 className="text-xl font-medium mt-2">{service.title}</h6>
-              <p className="desc mt-2 !text-white">{service.description}</p>
+              <h6 className="text-xl font-medium mt-2 group-hover:text-black">
+                {service.title}
+              </h6>
+              <p className="text-sm md:text-base font-light mt-2 text-white group-hover:text-black">
+                {service.description}
+              </p>
             </div>
           ))}
         </div>
@@ -172,7 +177,8 @@ const LandingPage = ({ page }) => {
       <Testimonials />
       <ConnectWithUs />
       <JoinHappyCustomers />
-      <ContactForm />
+      {/* <ContactForm /> */}
+      <LeadForm />
       <LandingFooter />
     </>
   );

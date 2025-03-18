@@ -56,6 +56,7 @@ const TrustWorthySection = React.memo(() => {
       >
         <div
           data-aos="fade-up"
+          data-aos-offset="-200"
           className="w-full flex flex-col items-center justify-center"
         >
           <h1 className="heading-1 text-darkgray">{yrs}+</h1>
@@ -65,12 +66,14 @@ const TrustWorthySection = React.memo(() => {
         </div>
         <div
           data-aos="fade-up"
+          data-aos-offset="-200"
           className="w-full flex flex-col items-center justify-center"
         >
           <h1 className="heading-1 text-darkgray">{experts}+</h1>
           <p className="font-medium mt-1 text-xl text-darkgray">Expert Team</p>
         </div>
         <div
+          data-aos-offset="-200"
           data-aos="fade-up"
           className="w-full flex flex-col items-center justify-center"
         >
@@ -80,6 +83,7 @@ const TrustWorthySection = React.memo(() => {
           </p>
         </div>
         <div
+          data-aos-offset="-200"
           data-aos="fade-up"
           className="w-full flex flex-col items-center justify-center"
         >

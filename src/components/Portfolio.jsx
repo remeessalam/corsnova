@@ -104,6 +104,7 @@ const Portfolio = ({ page }) => {
       <SubHeading heading="Our Portfolio" />
       <h2
         data-aos="fade-up"
+        data-aos-offset="-100"
         className="heading-2 max-w-[60rem] mx-auto text-center !text-black"
       >
         Work Speaks Volumes: Discover Our Projects
@@ -116,6 +117,7 @@ const Portfolio = ({ page }) => {
               <div
                 className="relative aspect-square sm:aspect-square rounded-xl overflow-hidden"
                 data-aos="fade-up"
+                data-aos-offset="-200"
               >
                 <div className="absolute top-0 w-full h-full bg-gradient-to-b from-transparent to-darkgray z-0"></div>
                 <img
