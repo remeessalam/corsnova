@@ -3,6 +3,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import SubHeading from "./SubHeading";
 import { appPortfolio, webPortfolio } from "../constant";
+import { ArrowLeft, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 
 const Portfolio = ({ page }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -99,6 +100,26 @@ const Portfolio = ({ page }) => {
     };
   }, [instanceRef]);
 
+  // Function to render dots for navigation
+  const renderDots = () => {
+    if (!instanceRef.current) return null;
+
+    return Array.from({ length: slideCount }).map((_, idx) => {
+      const activeIndex = currentSlide % slideCount;
+      return (
+        <button
+          key={idx}
+          onClick={() => {
+            instanceRef.current?.moveToIdx(idx);
+          }}
+          className={`h-3 w-3 rounded-full transition-all ${
+            activeIndex === idx ? "bg-primary w-6" : "bg-gray-300"
+          }`}
+        />
+      );
+    });
+  };
+
   return (
     <div className="pt-[5rem] wrapper flex flex-col items-center gap-5">
       <SubHeading heading="Our Portfolio" />
@@ -110,8 +131,20 @@ const Portfolio = ({ page }) => {
         Work Speaks Volumes: Discover Our Projects
       </h2>
 
-      <div className="w-full max-w-5xl mx-auto mt-5">
-        <div ref={sliderRef} className="keen-slider  py-[4rem]">
+      <div className="w-full max-w-5xl mx-auto mt-5 relative">
+        {/* Left arrow - hidden on mobile, visible on md and above */}
+        {loaded && instanceRef.current && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              instanceRef.current?.prev();
+            }}
+            className="absolute -left-11 top-1/2 -translate-y-1/2 z-10 hidden xl:flex h-10 w-10 rounded-full bg-primary shadow-lg items-center justify-center hover:bg-primary transition-all duration-300"
+          >
+            <ArrowLeft size={24} />
+          </button>
+        )}
+        <div ref={sliderRef} className="keen-slider py-[4rem]">
           {portfolioList.map(({ img, id, title }) => (
             <div key={id} className="keen-slider__slide shadowHover rounded-xl">
               <div
@@ -135,8 +168,43 @@ const Portfolio = ({ page }) => {
             </div>
           ))}
         </div>
-
-        {/* {loaded && (
+        {/* Right arrow - hidden on mobile, visible on md and above */}
+        {loaded && instanceRef.current && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              instanceRef.current?.next();
+            }}
+            className="absolute -right-11 top-1/2 -translate-y-1/2 z-10 hidden xl:flex h-10 w-10 rounded-full bg-primary shadow-lg items-center justify-center hover:bg-primary transition-all duration-300"
+          >
+            <ArrowRight size={24} />
+          </button>
+        )}
+        {/* Mobile arrows (bottom center) */}
+        {loaded && instanceRef.current && (
+          <div className="flex xl:hidden justify-center gap-4 mt-2">
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                instanceRef.current?.prev();
+              }}
+              className="h-10 w-10 rounded-full bg-primary shadow-lg flex items-center justify-center hover:bg-primary transition-all duration-300"
+            >
+              <ArrowLeft size={24} />
+            </button>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                instanceRef.current?.next();
+              }}
+              className="h-10 w-10 rounded-full bg-primary shadow-lg flex items-center justify-center hover:bg-primary transition-all duration-300"
+            >
+              <ArrowRight size={24} />
+            </button>
+          </div>
+        )}
+        {/* Dots navigation
+        {loaded && (
           <div className="flex justify-center gap-2 mt-4">{renderDots()}</div>
         )} */}
       </div>

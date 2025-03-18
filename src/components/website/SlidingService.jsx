@@ -4,7 +4,13 @@ import "keen-slider/keen-slider.min.css";
 import { allServices } from "../../constant";
 import SubHeading from "../SubHeading";
 import Drawer from "react-modern-drawer";
-import { X } from "lucide-react";
+import {
+  X,
+  ChevronLeft,
+  ChevronRight,
+  ArrowLeft,
+  ArrowRight,
+} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const SlidingService = () => {
@@ -95,6 +101,26 @@ const SlidingService = () => {
     };
   }, [instanceRef]);
 
+  // Function to render dots for navigation
+  const renderDots = () => {
+    if (!instanceRef.current) return null;
+
+    return Array.from({ length: slideCount }).map((_, idx) => {
+      const activeIndex = currentSlide % slideCount;
+      return (
+        <button
+          key={idx}
+          onClick={() => {
+            instanceRef.current?.moveToIdx(idx);
+          }}
+          className={`h-3 w-3 rounded-full transition-all ${
+            activeIndex === idx ? "bg-primary w-6" : "bg-gray-300"
+          }`}
+        />
+      );
+    });
+  };
+
   return (
     <section className="wrapper pt-[5rem] flex flex-col gap-5 items-center">
       <SubHeading heading="Our Services" />
@@ -105,7 +131,20 @@ const SlidingService = () => {
         From Concept to Reality: Building Tomorrow's Solutions Today
       </h2>
 
-      <div className=" w-full">
+      <div className="w-full relative">
+        {/* Left arrow - hidden on mobile, visible on md and above */}
+        {loaded && instanceRef.current && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              instanceRef.current?.prev();
+            }}
+            className="absolute -left-11 top-1/2 -translate-y-1/2 z-10 hidden xl:flex h-10 w-10 rounded-full bg-primary shadow-lg items-center justify-center hover:bg-primary transition-all duration-300"
+          >
+            <ArrowLeft size={24} />
+          </button>
+        )}
+
         <div ref={sliderRef} className="keen-slider py-[4rem]">
           {allServices.map((service, idx) => (
             <div
@@ -114,7 +153,7 @@ const SlidingService = () => {
             >
               <div
                 data-aos="fade-up"
-                className="bg-darkgray group h-full  hover:bg-primary transition-all duration-500 rounded-lg p-5 flex text-center flex-col justify-between"
+                className="bg-darkgray group h-full hover:bg-primary transition-all duration-500 rounded-lg p-5 flex text-center flex-col justify-between"
               >
                 <div className="flex flex-col items-center">
                   <service.icon
@@ -140,6 +179,44 @@ const SlidingService = () => {
           ))}
         </div>
 
+        {/* Right arrow - hidden on mobile, visible on md and above */}
+        {loaded && instanceRef.current && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              instanceRef.current?.next();
+            }}
+            className="absolute -right-11 top-1/2 -translate-y-1/2 z-10 hidden xl:flex h-10 w-10 rounded-full bg-primary shadow-lg items-center justify-center hover:bg-primary transition-all duration-300"
+          >
+            <ArrowRight size={24} />
+          </button>
+        )}
+
+        {/* Mobile arrows (bottom center) */}
+        {loaded && instanceRef.current && (
+          <div className="flex xl:hidden justify-center gap-4 mt-2">
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                instanceRef.current?.prev();
+              }}
+              className="h-10 w-10 rounded-full bg-primary shadow-lg flex items-center justify-center hover:bg-primary transition-all duration-300"
+            >
+              <ArrowLeft size={24} />
+            </button>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                instanceRef.current?.next();
+              }}
+              className="h-10 w-10 rounded-full bg-primary shadow-lg flex items-center justify-center hover:bg-primary transition-all duration-300"
+            >
+              <ArrowRight size={24} />
+            </button>
+          </div>
+        )}
+
+        {/* Dots navigation */}
         {/* {loaded && (
           <div className="flex justify-center gap-2 mt-4">{renderDots()}</div>
         )} */}
