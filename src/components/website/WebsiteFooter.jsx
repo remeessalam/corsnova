@@ -14,7 +14,7 @@ import { Helmet } from "react-helmet";
 
 const WebsiteFooter = () => {
   return (
-    <div className="py-[3rem] bg-gray-600">
+    <div className="py-[3rem] bg-darkgray">
       <div className="wrapper flex lg:flex-row flex-col gap-7 sm:gap-14 justify-between ">
         <div className="">
           <Helmet>

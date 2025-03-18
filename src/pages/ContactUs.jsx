@@ -19,38 +19,42 @@ const ContactUs = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
             <div
               data-aos="fade-up"
-              className="bg-tertiary flex flex-col gap-3 items-center justify-center rounded-xl p-5"
+              className="bg-darkgray group  hover:bg-hovercolor shadowHover flex flex-col gap-3 items-center justify-center rounded-xl p-5"
             >
               <MapPin
                 strokeWidth={2}
                 size={40}
-                className="text-primary inline min-w-5"
+                className="text-primary inline min-w-5 group-hover:text-black"
               />
-              <span className="text-center font-medium">
+              <span className="text-center font-medium group-hover:text-black">
                 {companyDetails.address}
               </span>
             </div>
             <Link
               to={`mailto:${companyDetails.email}`}
               data-aos="fade-up"
-              className="bg-tertiary flex flex-col gap-3 items-center justify-center rounded-xl p-5"
+              className="bg-darkgray flex group hover:bg-hovercolor shadowHover flex-col gap-3 items-center justify-center rounded-xl p-5"
             >
-              <Mail strokeWidth={2} size={40} className="text-primary inline" />
-              <span className="text-center font-medium">
+              <Mail
+                strokeWidth={2}
+                size={40}
+                className="text-primary inline group-hover:text-black"
+              />
+              <span className="text-center font-medium group-hover:text-black">
                 {companyDetails.email}
               </span>
             </Link>
             <Link
               to={`tel:${companyDetails.phone}`}
               data-aos="fade-up"
-              className="bg-tertiary flex flex-col gap-3 items-center justify-center rounded-xl p-5"
+              className="bg-darkgray group hover:bg-hovercolor shadowHover flex flex-col gap-3 items-center justify-center rounded-xl p-5"
             >
               <Phone
                 strokeWidth={2}
                 size={40}
-                className="text-primary inline"
+                className="text-primary inline group-hover:text-black"
               />
-              <span className="text-center font-medium">
+              <span className="text-center font-medium group-hover:text-black">
                 {companyDetails.phone}
               </span>
             </Link>

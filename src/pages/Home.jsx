@@ -22,9 +22,7 @@ const JoinHappyCustomers = React.lazy(() =>
 const WebsiteFooter = React.lazy(() =>
   import("../components/website/WebsiteFooter")
 );
-const AllServices = React.lazy(() =>
-  import("../components/website/AllServices")
-);
+
 const OurValue = React.lazy(() => import("../components/website/OurValue"));
 const WhyChooseUs = React.lazy(() => import("../components/WhyChooseUs"));
 const LeadForm = React.lazy(() => import("../components/LeadForm"));
@@ -61,9 +59,9 @@ const Home = () => {
             data-aos="fade-up"
             className="wrapper text-center flex flex-col gap-5 justify-center items-center h-full relative z-10"
           >
-            <p className="sub-heading">Welcome to</p>
+            <p className="sub-heading !text-white">Welcome to</p>
             <h1 className="heading text-stroke">CORSNOVA</h1>
-            <p className="sub-heading">
+            <p className="sub-heading !text-white">
               AI Meets Integrity - Empowering Innovation with Intelligence
             </p>
           </div>

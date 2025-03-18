@@ -53,7 +53,7 @@ const JoinHappyCustomers = () => {
   return (
     <div
       className="py-[5rem] bg-center bg-cover relative text-white"
-      style={{ backgroundImage: `url(${bgImg})` }}
+      // style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div className="absolute top-0 w-full h-full bg-black/75"></div>
       <div className="relative z-10">
@@ -74,7 +74,7 @@ const JoinHappyCustomers = () => {
                 loading="lazy"
                 src={img}
                 alt="featured in"
-                className="object-contain rounded-2xl"
+                className="object-contain rounded-2xl grayscale"
               />
             </div>
           ))}

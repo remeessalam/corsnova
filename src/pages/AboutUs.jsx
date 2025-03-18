@@ -63,7 +63,7 @@ const AboutUs = () => {
                   alt=""
                 />
               </div>
-              <h2 className="heading-2 max-w-[60rem] mx-auto">
+              <h2 className="heading-2 max-w-[60rem] mx-auto text-black">
                 Transforming Visions into Technological Reality
               </h2>
               <p className="desc">
@@ -77,7 +77,9 @@ const AboutUs = () => {
           </div>
         </div>
         <div data-aos="fade-up" className="mt-[2rem]">
-          <h2 className="text-xl font-medium">Where AI Meets Integrity</h2>
+          <h2 className="text-xl font-medium text-black">
+            Where AI Meets Integrity
+          </h2>
           <p className="desc mt-2">
             Our innovative solutions are designed not just to meet the demands
             of today but to anticipate the challenges of tomorrow, ensuring that
@@ -89,7 +91,7 @@ const AboutUs = () => {
           </p>
         </div>
         <div className="mt-[3rem]">
-          <h2 data-aos="fade-up" className="heading-2 text-center">
+          <h2 data-aos="fade-up" className="heading-2 text-center text-black">
             Our Visionary Goals
           </h2>
           <div className="flex flex-col-reverse md:grid grid-cols-2 gap-10 mt-7">

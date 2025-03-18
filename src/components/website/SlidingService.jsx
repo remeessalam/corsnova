@@ -17,6 +17,7 @@ const SlidingService = () => {
 
   const [sliderRef, instanceRef] = useKeenSlider({
     initial: 0,
+    loop: true,
     slides: {
       perView: () => {
         if (window.innerWidth < 640) return 1;
@@ -94,29 +95,8 @@ const SlidingService = () => {
     };
   }, [instanceRef]);
 
-  const renderDots = () => {
-    // Only render if we have valid numbers
-    if (!slideCount || slideCount <= 0) return null;
-
-    const dots = [];
-    for (let i = 0; i < slideCount; i++) {
-      dots.push(
-        <button
-          key={i}
-          onClick={() => {
-            instanceRef.current?.moveToIdx(i);
-          }}
-          className={`w-3 h-3 rounded-full ${
-            currentSlide === i ? "bg-primary" : "bg-gray-300"
-          }`}
-        ></button>
-      );
-    }
-    return dots;
-  };
-
   return (
-    <section className="wrapper py-[5rem] flex flex-col gap-5 items-center">
+    <section className="wrapper pt-[5rem] flex flex-col gap-5 items-center">
       <SubHeading heading="Our Services" />
       <h2
         data-aos="fade-up"
@@ -125,13 +105,16 @@ const SlidingService = () => {
         From Concept to Reality: Building Tomorrow's Solutions Today
       </h2>
 
-      <div className="mt-5 w-full">
-        <div ref={sliderRef} className="keen-slider">
+      <div className=" w-full">
+        <div ref={sliderRef} className="keen-slider py-[4rem]">
           {allServices.map((service, idx) => (
-            <div key={idx} className="keen-slider__slide">
+            <div
+              key={idx}
+              className="keen-slider__slide shadowHover rounded-lg"
+            >
               <div
                 data-aos="fade-up"
-                className="bg-darkgray group h-full hover:bg-primary transition-all duration-500 rounded-lg p-5 flex text-center flex-col justify-between"
+                className="bg-darkgray group h-full  hover:bg-primary transition-all duration-500 rounded-lg p-5 flex text-center flex-col justify-between"
               >
                 <div className="flex flex-col items-center">
                   <service.icon
@@ -157,9 +140,9 @@ const SlidingService = () => {
           ))}
         </div>
 
-        {loaded && (
+        {/* {loaded && (
           <div className="flex justify-center gap-2 mt-4">{renderDots()}</div>
-        )}
+        )} */}
       </div>
 
       <Drawer

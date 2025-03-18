@@ -100,8 +100,8 @@ const Testimonials = () => {
                       alt={item.name}
                       className="h-full w-[2rem] rounded-full object-cover"
                     />
-                    <p className="font-medium mt-1">{item.name}</p>
-                    <p className="text-sm">{item.position}</p>
+                    <p className="font-medium mt-1 text-black">{item.name}</p>
+                    <p className="text-sm text-black">{item.position}</p>
                   </div>
                 </div>
               </div>
