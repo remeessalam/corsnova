@@ -43,7 +43,7 @@ export { logoImg };
 
 export const companyDetails = {
   phone: "+91 7425860950",
-  address: "ABC Street, City, Country",
+  address: "1502, Vista 2, Uniworld City, New Town Kolkata : 700156",
   email: "techteam@corsnova.com",
   linkedin: "",
   instagram: "",
