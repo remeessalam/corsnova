@@ -44,7 +44,7 @@ const GenerativeAi = () => {
           {service.additionalDetails.services.map((obj) => (
             <div key={obj.title} className="flex flex-col gap-2">
               <div className="flex gap-3 items-center">
-                <div className="w-[1.6rem] text-lg h-[1.6rem] rounded-full flex items-center justify-center border-2 border-[#00B0FC] text-[#00B0FC]">
+                <div className="w-[1.6rem] text-lg h-[1.6rem] rounded-full flex items-center justify-center border-2 border-primary text-primary">
                   ✓
                 </div>
                 <h3 className="text-lg font-semibold">{obj.title}</h3>

@@ -17,7 +17,7 @@ const ServicePageLayout = () => {
           <div className="w-full hidden md:flex flex-col gap-10">
             <div
               data-aos="fade-up"
-              className="bg-[#ECF8FF] p-4 lg:p-6 rounded-lg"
+              className="bg-darkgray p-4 lg:p-6 rounded-lg"
             >
               <h4 className="text-2xl font-medium text-secondary">
                 All Services
@@ -39,7 +39,7 @@ const ServicePageLayout = () => {
             </div>
             <div
               data-aos="fade-up"
-              className="text-center bg-[#010C2A] flex flex-col items-center gap-5 text-white px-4 lg:px-6 py-10 rounded-lg"
+              className="text-center bg-darkgray flex flex-col items-center gap-5 text-white px-4 lg:px-6 py-10 rounded-lg"
             >
               <div className="w-[3.5rem] h-[3.5rem] bg-white text-secondary rounded-full p-3 flex justify-center items-center">
                 <PhoneCall className="text-3xl" />
@@ -59,7 +59,7 @@ const ServicePageLayout = () => {
           </div>
           <div
             data-aos="fade-up"
-            className="text-center bg-[#010C2A] md:hidden flex flex-col items-center gap-5 text-white px-4 lg:px-6 py-10 rounded-lg"
+            className="text-center bg-darkgray md:hidden flex flex-col items-center gap-5 text-white px-4 lg:px-6 py-10 rounded-lg"
           >
             <div className="w-[3.5rem] h-[3.5rem] bg-white text-secondary rounded-full p-3 flex justify-center items-center">
               <PhoneCall className="text-3xl !text-secondary" />

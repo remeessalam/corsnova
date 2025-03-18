@@ -26,7 +26,7 @@ const AllServices = () => {
         {allServices.map((service) => (
           <div
             data-aos="fade-up"
-            className="bg-darkgray group  hover:bg-primary transition-all duration-500 rounded-lg p-5 flex text-center flex-col justify-between"
+            className="bg-darkgray group  hover:bg-primary shadowHover transition-all duration-500 rounded-lg p-5 flex text-center flex-col justify-between"
           >
             <div className="flex flex-col items-center">
               <service.icon
