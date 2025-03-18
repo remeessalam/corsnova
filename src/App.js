@@ -81,7 +81,7 @@ function App() {
               <Route path="generative-ai" element={<GenerativeAi />} />
               <Route
                 path="chatbot-development"
-                element={<GenerativeAi />}
+                element={<ChatbotDevelopmentAiCalling />}
                 // element={<ChatbotDevelopmentAiCalling />}
               />
               <Route

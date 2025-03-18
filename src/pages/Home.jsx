@@ -32,18 +32,21 @@ const Home = () => {
     {
       icon: <Code size={50} />, // Lucide icon for Web Development
       title: "Web Development",
+      link: "/services/website-development",
       description:
         "Build responsive, scalable, and high-performance web applications.",
     },
     {
       icon: <Smartphone size={50} />, // Lucide icon for Mobile Development
       title: "Mobile Development",
+      link: "/services/mobile-app-development",
       description:
         "Create seamless and engaging mobile applications for all platforms.",
     },
     {
       icon: <BrainCircuit size={50} />, // Lucide icon for AI Development
       title: "AI Development",
+      link: "/services/ai-development",
       description:
         "Leverage AI to drive innovation and automate processes efficiently.",
     },
@@ -94,8 +97,9 @@ const Home = () => {
         className="md:-mt-[7rem] py-[2rem] relative z-10 max-w-6xl mx-auto px-6 grid sm:grid-cols-2 md:grid-cols-3 gap-5"
       >
         {services.map((service, index) => (
-          <div
+          <Link
             key={index}
+            to={service.link}
             className="bg-darkgray group shadowHover  hover:bg-hovercolor rounded-lg p-5 transition-all duration-300"
           >
             <div className="flex gap-3 mb-4 group-hover:text-black">
@@ -107,7 +111,7 @@ const Home = () => {
             <p className="desc !text-white group-hover:!text-black">
               {service.description}
             </p>
-          </div>
+          </Link>
         ))}
       </div>
       <section className="text-black wrapper py-[3rem]">
