@@ -28,7 +28,7 @@ const Portfolio = ({ page }) => {
             key={id}
             data-aos="fade-up"
           >
-            <div className="absolute top-0 w-full h-full bg-gradient-to-b from-transparent to-[#0a1828db] z-0"></div>
+            <div className="absolute top-0 w-full h-full bg-gradient-to-b from-transparent to-darkgray z-0"></div>
             <img
               loading="lazy"
               src={img}
@@ -37,7 +37,7 @@ const Portfolio = ({ page }) => {
               className={`-z-10 h-full w-full object-cover`}
               alt={title}
             />
-            <h3 className="text-xl absolute p-3 bottom-0 left-0 w-full bg-[#0f2136] text-center text-white">
+            <h3 className="text-xl absolute p-3 bottom-0 left-0 w-full bg-darkgray text-center text-white">
               {title}
             </h3>
           </div>

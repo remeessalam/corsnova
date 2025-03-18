@@ -26,21 +26,14 @@ const AllServices = () => {
         {allServices.map((service) => (
           <div
             data-aos="fade-up"
-            className="bg-black group  hover:bg-primary rounded-lg p-5 flex text-center flex-col justify-between"
+            className="bg-darkgray group  hover:bg-primary transition-all duration-500 rounded-lg p-5 flex text-center flex-col justify-between"
           >
             <div className="flex flex-col items-center">
               <service.icon
                 size={50}
-                className="h-[3.5rem] md:h-[5rem]  grayscale"
+                className="h-[3.5rem] md:h-[5rem]  grayscale group-hover:text-black"
               />
-              {/* <img
-                loading="lazy"
-                src={service.icon}
-                width="75"
-                height="75"
-                className="h-[3.5rem] md:h-[4rem] object-contain grayscale"
-                alt=""
-              /> */}
+
               <h6 className="text-xl font-medium mt-2 group-hover:text-black">
                 {service.title}
               </h6>

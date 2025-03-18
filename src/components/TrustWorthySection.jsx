@@ -58,29 +58,35 @@ const TrustWorthySection = React.memo(() => {
           data-aos="fade-up"
           className="w-full flex flex-col items-center justify-center"
         >
-          <h1 className="heading-1">{yrs}+</h1>
-          <p className="font-medium mt-1 text-xl">Years of Experience</p>
+          <h1 className="heading-1 text-darkgray">{yrs}+</h1>
+          <p className="font-medium mt-1 text-xl text-darkgray">
+            Years of Experience
+          </p>
         </div>
         <div
           data-aos="fade-up"
           className="w-full flex flex-col items-center justify-center"
         >
-          <h1 className="heading-1">{experts}+</h1>
-          <p className="font-medium mt-1 text-xl">Expert Team</p>
+          <h1 className="heading-1 text-darkgray">{experts}+</h1>
+          <p className="font-medium mt-1 text-xl text-darkgray">Expert Team</p>
         </div>
         <div
           data-aos="fade-up"
           className="w-full flex flex-col items-center justify-center"
         >
-          <h1 className="heading-1">{clients}+</h1>
-          <p className="font-medium mt-1 text-xl">Happy Clients</p>
+          <h1 className="heading-1 text-darkgray">{clients}+</h1>
+          <p className="font-medium mt-1 text-xl text-darkgray">
+            Happy Clients
+          </p>
         </div>
         <div
           data-aos="fade-up"
           className="w-full flex flex-col items-center justify-center"
         >
-          <h1 className="heading-1">{completedProjects}+</h1>
-          <p className="font-medium mt-1 text-xl">Projects Completed</p>
+          <h1 className="heading-1 text-darkgray">{completedProjects}+</h1>
+          <p className="font-medium mt-1 text-xl text-darkgray">
+            Projects Completed
+          </p>
         </div>
       </div>
     </div>

@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import SubHeading from "../components/SubHeading";
 import ReactPlayer from "react-player";
 import vid from "../assets/video/banner.mp4";
+import SlidingService from "../components/website/SlidingService";
 const WebsiteHeader = React.lazy(() =>
   import("../components/website/WebsiteHeader")
 );
@@ -97,15 +98,15 @@ const Home = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-black group hover:bg-primary rounded-lg p-5"
+            className="bg-darkgray group shadowHover  hover:bg-hovercolor rounded-lg p-5 transition-all duration-300"
           >
-            <div className="flex gap-3 mb-4">
+            <div className="flex gap-3 mb-4 group-hover:text-black">
               {service.icon}
               <p className="text-lg leading-tight font-medium group-hover:text-black">
                 {service.title}
               </p>
             </div>
-            <p className="desc !text-white group-hover:text-black">
+            <p className="desc !text-white group-hover:!text-black">
               {service.description}
             </p>
           </div>
@@ -168,8 +169,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      <AllServices />
+      <SlidingService />
+      {/* <AllServices /> */}
       <TrustWorthySection />
       <OurValue />
       <Portfolio />

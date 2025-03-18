@@ -20,7 +20,7 @@ html {
 
 .text-stroke {
   color: transparent;
-  -webkit-text-stroke: 2px #ffffff;
+  -webkit-text-stroke: 2px #f5f5f5;
 }
 
 ::-webkit-scrollbar {
@@ -31,6 +31,16 @@ html {
 ::-webkit-scrollbar-thumb {
   background-color: #ccd222;
   border-radius: 8px;
+}
+.shadowHover:hover {
+  -webkit-box-shadow: 10px 10px 18px 3px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 10px 10px 18px 3px rgba(0, 0, 0, 0.35);
+  box-shadow: 10px 10px 18px 3px rgba(0, 0, 0, 0.35);
+}
+.shadowHoverWhite:hover {
+  -webkit-box-shadow: 10px 12px 19px -1px rgba(255, 255, 255, 0.23);
+  -moz-box-shadow: 10px 12px 19px -1px rgba(255, 255, 255, 0.23);
+  box-shadow: 10px 12px 19px -1px rgba(255, 255, 255, 0.23);
 }
 
 @layer utilities {
@@ -53,19 +63,19 @@ html {
     @apply text-sm md:text-base font-light text-black/80;
   }
   .active-link {
-    @apply text-primary font-medium;
+    @apply text-hovercolor font-medium;
   }
   .primary-btn {
-    @apply text-white font-medium cursor-pointer tracking-wide bg-gradient-to-b from-secondary to-primary text-sm hover:shadow-primary/30 hover:-translate-y-1 shadow-large shadow-transparent rounded-full px-4 py-3 min-w-[8rem] flex justify-center text-center transition-all duration-300;
+    @apply text-darkgray font-medium border border-darkgray cursor-pointer tracking-wide bg-primary text-sm  hover:scale-105  rounded-full px-4 py-3 min-w-[8rem] flex justify-center text-center transition-all duration-300;
   }
   .secondary-btn {
-    @apply text-white font-medium cursor-pointer tracking-wide bg-gradient-to-b from-secondary to-primary text-sm hover:shadow-secondary hover:-translate-y-1 shadow-large shadow-transparent rounded-full px-4 py-3 min-w-[8rem] flex justify-center text-center transition-all duration-300;
+    @apply text-darkgray font-medium cursor-pointer tracking-wide bg-primary text-sm hover:shadow-secondary hover:-translate-y-1 shadow-large shadow-transparent rounded-full px-4 py-3 min-w-[8rem] flex justify-center text-center transition-all duration-300;
   }
   .link {
-    @apply cursor-pointer hover:text-primary transition-colors duration-200;
+    @apply cursor-pointer hover:text-hovercolor transition-colors duration-200;
   }
   .section-heading {
-    @apply font-medium text-lg text-primary;
+    @apply font-medium text-lg text-darkgray;
   }
 }
 

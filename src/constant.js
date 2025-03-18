@@ -42,9 +42,9 @@ import Services from "./pages/Services";
 export { logoImg };
 
 export const companyDetails = {
-  phone: "+0000000000",
+  phone: "+91 7425860950",
   address: "ABC Street, City, Country",
-  email: "abc@xyz.com",
+  email: "techteam@corsnova.com",
   linkedin: "",
   instagram: "",
   twitter: "",
