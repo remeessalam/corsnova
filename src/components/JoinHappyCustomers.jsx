@@ -74,7 +74,7 @@ const JoinHappyCustomers = () => {
                 loading="lazy"
                 src={img}
                 alt="featured in"
-                className="object-contain rounded-2xl grayscale"
+                className="object-contain rounded-2xl "
               />
             </div>
           ))}
