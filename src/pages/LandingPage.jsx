@@ -128,6 +128,7 @@ const LandingPage = ({ page }) => {
           </div>
         </div>
       </section>
+      <LeadForm />
 
       <section
         id="services"
