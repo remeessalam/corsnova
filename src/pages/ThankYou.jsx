@@ -15,7 +15,7 @@ const ThankYou = () => {
   return (
     <>
       <div className="h-[calc(100vh-18rem)] flex flex-col items-center justify-center">
-        <div className="py-4 sticky top-0 w-full bg-secondary/60 backdrop-blur-md z-50 text-white">
+        <div className="py-4 sticky top-0 w-full bg-darkgray backdrop-blur-md z-50 text-white">
           <div className="wrapper flex justify-between items-center gap-10">
             <div className="flex justify-between items-center gap-20 w-full pl-[1rem] ">
               <Link smooth={true} to="/" className="cursor-pointer">
@@ -45,7 +45,7 @@ const ThankYou = () => {
           </Link>
         </div>
       </div>
-      <div className="py-[3rem] bg-gray-700">
+      <div className="py-[3rem] bg-darkgray">
         <div className="wrapper flex lg:flex-row flex-col gap-7 sm:gap-14 justify-between">
           <div className="">
             <img
@@ -64,19 +64,19 @@ const ThankYou = () => {
             <div className="flex items-center gap-3 mt-5">
               <Link
                 to={companyDetails.instagram}
-                className="w-[2rem] h-[2rem] rounded-full p-2 bg-[#0788AE] hover:bg-tertiary hover:-translate-y-1 transition-all duration-300 flex justify-center items-center"
+                className="w-[2rem] h-[2rem] hover:text-black rounded-full p-2 bg-black  hover:bg-primary hover:-translate-y-1 transition-all duration-300 flex justify-center items-center"
               >
                 <Instagram strokeWidth={1.5} size={20} />
               </Link>
               <Link
                 to={companyDetails.twitter}
-                className="w-[2rem] h-[2rem] rounded-full p-2 bg-[#0788AE] hover:bg-tertiary hover:-translate-y-1 transition-all duration-300 flex justify-center items-center"
+                className="w-[2rem] h-[2rem] hover:text-black rounded-full p-2 bg-black  hover:bg-primary hover:-translate-y-1 transition-all duration-300 flex justify-center items-center"
               >
                 <Twitter strokeWidth={1.5} size={20} />
               </Link>
               <Link
                 to={companyDetails.linkedin}
-                className="w-[2rem] h-[2rem] rounded-full p-2 bg-[#0788AE] hover:bg-tertiary hover:-translate-y-1 transition-all duration-300 flex justify-center items-center"
+                className="w-[2rem] h-[2rem] hover:text-black rounded-full p-2 bg-black  hover:bg-primary hover:-translate-y-1 transition-all duration-300 flex justify-center items-center"
               >
                 <Linkedin strokeWidth={1.5} size={20} />
               </Link>
@@ -134,19 +134,6 @@ const ThankYou = () => {
                       className="text-primary inline"
                     />{" "}
                     <span className="text-sm">{companyDetails.phone}</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to={`tel:${companyDetails.phone2}`}
-                    className="flex gap-3 text-white/70 hover:text-primary transition-colors duration-200"
-                  >
-                    <Phone
-                      strokeWidth={1.5}
-                      size={20}
-                      className="text-primary inline"
-                    />{" "}
-                    <span className="text-sm">{companyDetails.phone2}</span>
                   </Link>
                 </li>
               </ul>
