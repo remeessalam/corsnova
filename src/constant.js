@@ -42,6 +42,7 @@ import Services from "./pages/Services";
 export { logoImg };
 
 export const companyDetails = {
+  name: "CORSNOVA",
   phone: "+91 7425860950",
   whatsapp:
     "https://api.whatsapp.com/send/?phone=7425860950&text&type=phone_number&app_absent=0",
