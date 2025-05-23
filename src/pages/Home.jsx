@@ -179,7 +179,7 @@ const Home = () => {
       <WhyChooseUs />
       <Testimonials />
       <JoinHappyCustomers />
-      <LeadForm />
+      <LeadForm padding={true} />
       <WebsiteFooter />
     </>
   );

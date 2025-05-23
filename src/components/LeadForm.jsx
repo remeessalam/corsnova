@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
-const LeadForm = () => {
+const LeadForm = ({ padding }) => {
   const { setSpinner } = useContext(SpinnerContext);
   const navigate = useNavigate();
   const {
@@ -67,7 +67,7 @@ const LeadForm = () => {
       .finally(() => setSpinner(false));
   };
   return (
-    <div className="flex flex-col gap-5 py-[4rem]">
+    <div className={`  flex flex-col gap-5 ${padding && `py-[4rem]`} `}>
       <h2 data-aos="fade-up" className="heading-2 text-center !text-black">
         Connect With Us Today!
       </h2>

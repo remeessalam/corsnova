@@ -8,6 +8,7 @@ import webDevAboutImg from "../assets/images/landingpage/web-dev-about.webp";
 import ReactPlayer from "react-player";
 import vid from "../assets/video/banner.mp4";
 import LeadForm from "../components/LeadForm";
+import LandingWhyChooseUs from "../components/landingPages/LandingWhyChooseUs";
 
 const LandingHeader = lazy(() =>
   import("../components/landingPages/LandingHeader")
@@ -39,23 +40,31 @@ const LandingPage = ({ page }) => {
     <>
       <LandingHeader />
 
-      <section id="banner" className="h-screen w-screen  relative text-white">
-        <div
-          data-aos="fade-up"
-          className="wrapper text-center flex flex-col gap-5 justify-center items-center h-full relative z-10"
-        >
-          <p className="text-xl">
-            Welcome to{" "}
-            <span className="text-primary font-semibold">CORSNOVA</span>
-          </p>
-          <h1 className="heading-1 text-stroke">
-            {isWebLanding
-              ? "Crafting High-Performance Websites that Drive Results"
-              : "Innovation-Driven App Development Services"}
-          </h1>
-          <p className="sub-heading !text-white">
-            AI Meets Integrity - Empowering Innovation with Intelligence
-          </p>
+      <section
+        id="banner"
+        className="h-screen w-screen  relative text-white flex justify-center items-center"
+      >
+        <div className="grid lg:grid-cols-2 h-full items-center wrapper pt-[4rem]">
+          <div
+            data-aos="fade-up"
+            className="wrapper text-center lg:text-start flex flex-col gap-5 justify-center lg:items-start items-center h-full relative z-10"
+          >
+            <p className="text-xl text-center lg:text-start">
+              Welcome to{" "}
+              <span className="text-primary font-semibold">CORSNOVA</span>
+            </p>
+            <h1 className="heading-1 text-stroke">
+              {isWebLanding
+                ? "Crafting High-Performance Websites that Drive Results"
+                : "Innovation-Driven App Development Services"}
+            </h1>
+            <p className="sub-heading !text-white">
+              AI Meets Integrity - Empowering Innovation with Intelligence
+            </p>
+          </div>
+          <div className="z-10 bg-white p-5 h-fit lg:flex hidden">
+            <LeadForm padding={false} />
+          </div>
         </div>
         <div className="absolute top-0">
           <ReactPlayer
@@ -81,6 +90,13 @@ const LandingPage = ({ page }) => {
           />
         </div>
       </section>
+
+      <div className="z-10 bg-white p-5 h-fit lg:hidden flex">
+        <LeadForm padding={true} />
+      </div>
+
+      <JoinHappyCustomers removebg={true} />
+
       <section id="about" className="text-white wrapper pt-[3rem]">
         <div className="grid lg:grid-cols-2 gap-10 mt-7">
           <div data-aos="fade-up" className="hidden lg:block h-full">
@@ -128,7 +144,7 @@ const LandingPage = ({ page }) => {
           </div>
         </div>
       </section>
-      <LeadForm />
+      {/* <LeadForm padding={true}/> */}
 
       <section
         id="services"
@@ -147,26 +163,35 @@ const LandingPage = ({ page }) => {
         >
           Enhancing Brands with Engaging Web Experiences
         </h2>
-        <div className="mt-5 grid sm:grid-cols-2 gap-6">
-          {services.map((service) => (
-            <div
-              data-aos="fade-up"
-              className="bg-black group hover:bg-hovercolor shadowHover items-center rounded-lg p-5 flex text-center flex-col"
-            >
-              <img
-                loading="lazy"
-                src={service.icon}
-                className="h-[3.5rem] md:h-[4.5rem] object-contain grayscale"
-                alt={service.title}
-                width="100"
-                height="100"
-              />
-              <h6 className="text-xl font-medium mt-2 group-hover:text-black">
+        <div className="grid md:grid-cols-2 gap-8">
+          {services.map((service, index) => (
+            <div key={index} className="flex flex-col items-start">
+              <div className="mb-2">
+                <h3 className="text-3xl font-bold text-[#333]">
+                  0{service.id}.
+                </h3>
+                <div className="w-16 h-1 bg-yellow-400 mt-1 mb-4"></div>
+              </div>
+
+              <h4 className="text-3xl font-bold text-[#333] mb-4">
                 {service.title}
-              </h6>
-              <p className="text-sm md:text-base font-light mt-2 text-white group-hover:text-black">
+              </h4>
+
+              <p className="text-base text-[#555] mb-8">
                 {service.description}
               </p>
+
+              <div className="w-full flex justify-center">
+                <div className="rounded-full border-[10px] border-[#c5e063] overflow-hidden w-[300px] h-[300px]">
+                  <img
+                    src={service.icon || "/placeholder.svg"}
+                    alt={service.title}
+                    width={300}
+                    height={300}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
           ))}
         </div>
@@ -174,12 +199,11 @@ const LandingPage = ({ page }) => {
 
       <TrustWorthySection />
       <Portfolio page={page} />
-      <WhyChooseUs />
+      <LandingWhyChooseUs />
       <Testimonials />
       <ConnectWithUs />
-      <JoinHappyCustomers />
       {/* <ContactForm /> */}
-      <LeadForm />
+      <LeadForm padding={true} />
       <LandingFooter />
     </>
   );

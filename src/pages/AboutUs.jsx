@@ -219,7 +219,7 @@ const AboutUs = () => {
       </section> */}
       <Testimonials />
       <JoinHappyCustomers />
-      <LeadForm />
+      <LeadForm padding={true} />
       <WebsiteFooter />
     </>
   );

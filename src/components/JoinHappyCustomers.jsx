@@ -1,5 +1,4 @@
 import React from "react";
-import bgImg from "../assets/images/bg-img.webp";
 import { useKeenSlider } from "keen-slider/react";
 import img1 from "../assets/images/client-logos/1.png";
 import img2 from "../assets/images/client-logos/2.png";
@@ -11,7 +10,7 @@ import img7 from "../assets/images/client-logos/7.png";
 
 const animation = { duration: 10000, easing: (t) => t };
 
-const JoinHappyCustomers = () => {
+const JoinHappyCustomers = ({ removebg }) => {
   const [sliderRef] = useKeenSlider({
     loop: true,
     renderMode: "performance",
@@ -52,10 +51,16 @@ const JoinHappyCustomers = () => {
   });
   return (
     <div
-      className="py-[5rem] bg-center bg-cover relative text-white"
+      className={`py-[5rem] bg-center bg-cover relative ${
+        removebg ? `text-black` : `text-white`
+      }`}
       // style={{ backgroundImage: `url(${bgImg})` }}
     >
-      <div className="absolute top-0 w-full h-full bg-black/75"></div>
+      <div
+        className={`absolute top-0 w-full h-full ${
+          removebg ? `bg-white` : `bg-black/75`
+        }`}
+      ></div>
       <div className="relative z-10">
         <div data-aos="fade-up" className="wrapper">
           <h2 className="heading-2 max-w-[60rem] mx-auto text-center">

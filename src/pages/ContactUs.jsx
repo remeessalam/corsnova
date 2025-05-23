@@ -59,7 +59,7 @@ const ContactUs = () => {
               </span>
             </Link>
           </div>
-          <LeadForm />
+          <LeadForm padding={true} />
         </div>
       </div>
       <div className="mt-[3rem] relative">
