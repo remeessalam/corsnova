@@ -95,6 +95,13 @@ const WebsiteHeader = () => {
                 {name}
               </Link>
             ))}
+            <Link
+              onClick={() => setIsOpen(false)}
+              to={`/blogs`}
+              className="text-3xl text-white font-medium transition-colors duration-300 link"
+            >
+              Blogs
+            </Link>
           </div>
         </Drawer>
         <button

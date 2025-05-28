@@ -21,7 +21,7 @@ function BlogPage() {
     <>
       <WebsiteHeader />
 
-      <div className="dark:bg-darkblack max-w-screen">
+      <div className=" max-w-screen min-h-screen">
         <BlogHeader />
         <div className="wrapper pb-[3rem]">
           {isLoading ? (
@@ -38,7 +38,7 @@ function BlogPage() {
               {blogs.length > 0 ? (
                 blogs.map((blog) => <BlogItem key={blog._id} item={blog} />)
               ) : (
-                <div className="col-span-3 text-center text-2xl py-10 dark:text-white">
+                <div className="col-span-3 text-center text-2xl py-10 text-black">
                   No blogs found
                 </div>
               )}
