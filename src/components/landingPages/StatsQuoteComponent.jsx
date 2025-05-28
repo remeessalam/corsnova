@@ -12,7 +12,7 @@ const StatsQuoteComponent = () => {
             <div className="flex-1 bg-primary rounded-3xl p-6 md:p-8 shadow-lg">
               <div className="text-center">
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-2">
-                  500+
+                  110+
                 </h2>
                 <p className="text-gray-700 text-lg md:text-xl font-medium">
                   Projects Developed
