@@ -9,6 +9,7 @@ import ReactPlayer from "react-player";
 import vid from "../assets/video/banner.mp4";
 import LeadForm from "../components/LeadForm";
 import LandingWhyChooseUs from "../components/landingPages/LandingWhyChooseUs";
+import StatsQuoteComponent from "../components/landingPages/StatsQuoteComponent";
 
 const LandingHeader = lazy(() =>
   import("../components/landingPages/LandingHeader")
@@ -53,7 +54,7 @@ const LandingPage = ({ page }) => {
               Welcome to{" "}
               <span className="text-primary font-semibold">CORSNOVA</span>
             </p>
-            <h1 className="heading-1 text-stroke">
+            <h1 className="heading-1 text-stroke !text-[2rem]">
               {isWebLanding
                 ? "Crafting High-Performance Websites that Drive Results"
                 : "Innovation-Driven App Development Services"}
@@ -61,9 +62,15 @@ const LandingPage = ({ page }) => {
             <p className="sub-heading !text-white">
               AI Meets Integrity - Empowering Innovation with Intelligence
             </p>
+            <div className="md:flex hidden">
+              <StatsQuoteComponent />
+            </div>
           </div>
-          <div className="z-10 bg-white p-5 h-fit lg:flex hidden">
-            <LeadForm padding={false} />
+          <div className=" justify-center flex-col lg:flex hidden items-center z-10 h-full">
+            <div className=" bg-black   w-[93%] h-[8rem] lg:flex hidden  rounded-[5rem] " />
+            <div className="-mt-[6rem] z-10 bg-white p-5 h-fit lg:flex hidden rounded-[2rem] shadow-xl">
+              <LeadForm padding={false} />
+            </div>
           </div>
         </div>
         <div className="absolute top-0">
@@ -90,7 +97,9 @@ const LandingPage = ({ page }) => {
           />
         </div>
       </section>
-
+      <div className="flex md:hidden wrapper pt-[4rem]">
+        <StatsQuoteComponent />
+      </div>
       <div className="z-10 bg-white p-5 h-fit lg:hidden flex">
         <LeadForm padding={true} />
       </div>
