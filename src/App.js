@@ -28,6 +28,8 @@ import ItConsultingAndStrategy from "./pages/ServicePage/ItConsultingAndStrategy
 import CloudMigrationServices from "./pages/ServicePage/CloudMigrationServices";
 import UiUxDesigning from "./pages/ServicePage/UiUxDesigning";
 import ChatbotDevelopmentAiCalling from "./pages/ServicePage/ChatbotDevelopmentAiCalling";
+import BlogPage from "./pages/BlogPage";
+import BlogView from "./pages/BlogView";
 const LandingPage = lazy(() => import("./pages/LandingPage"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
 
@@ -64,7 +66,8 @@ function App() {
                 element={route.element}
               />
             ))}
-
+            <Route path="/blogs" element={<BlogPage />} />
+            <Route path="/blog/:slug" element={<BlogView />} />
             <Route path="*" element={<Navigate to="/" />} />
             <Route path="/thank-you" element={<ThankYou />} />
             {/** service page */}

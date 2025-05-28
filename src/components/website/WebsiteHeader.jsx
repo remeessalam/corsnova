@@ -51,6 +51,14 @@ const WebsiteHeader = () => {
                 </Link>
               ))}
             <Link
+              to={`/blogs`}
+              className={`text-sm link ${
+                "/blogs" === pathname && "text-primary font-medium"
+              }`}
+            >
+              Blogs
+            </Link>
+            <Link
               to="/contact-us"
               className="primary-btn"
               spy={true}
