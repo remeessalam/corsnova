@@ -8,6 +8,7 @@ import { LoadingSpinner } from "../components/LoadingSpinner";
 import ViewBlogHeader from "../components/blog/ViewBlogHeader";
 import WebsiteHeader from "../components/website/WebsiteHeader";
 import WebsiteFooter from "../components/website/WebsiteFooter";
+import { Helmet } from "react-helmet";
 
 function BlogView() {
   const { slug } = useParams();
@@ -75,6 +76,36 @@ function BlogView() {
     <>
       {" "}
       <WebsiteHeader />
+      <Helmet>
+        <title>{blog.title} | Kheya Mindai</title>
+        <meta
+          name="description"
+          content={
+            blog.metaDescription || blog.excerpt || `Read about ${blog.title}`
+          }
+        />
+        {blog.metaKeywords && blog.metaKeywords.length > 0 ? (
+          <meta name="keywords" content={blog.metaKeywords.join(",")} />
+        ) : (
+          blog.tags &&
+          blog.tags.length > 0 && (
+            <meta name="keywords" content={blog.tags.join(",")} />
+          )
+        )}
+        {blog.categoryId && (
+          <meta name="category" content={blog.categoryId.name} />
+        )}
+        <meta property="og:title" content={blog.title} />
+        <meta
+          property="og:description"
+          content={
+            blog.metaDescription || blog.excerpt || `Read about ${blog.title}`
+          }
+        />
+        <meta property="og:image" content={blog.imageUrl} />
+        <meta property="og:type" content="article" />
+        <link rel="canonical" href={`https://corsnova.com/blog/${slug}`} />
+      </Helmet>
       <div className="relative  overflow-x-hidden max-w-screen">
         <div className="relative max-w-5xl mx-auto px-4 space-y-10 pt-[7rem] pb-10 overflow-hidden">
           {/* Blog Header with all metadata */}

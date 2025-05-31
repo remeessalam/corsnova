@@ -1,5 +1,6 @@
 import React from "react";
 import { format } from "date-fns";
+import { Link } from "react-router-dom";
 
 function ViewBlogHeader({ blog }) {
   // Format the publish date
@@ -9,6 +10,25 @@ function ViewBlogHeader({ blog }) {
 
   return (
     <header className="z-10" data-aos="fade-up">
+      {/* ✅ Breadcrumb */}
+      <nav className="text-sm text-gray-600 mb-2">
+        <ol className="flex flex-wrap gap-2">
+          <li>
+            <Link to="/" className="hover:underline text-black">
+              Home
+            </Link>
+            <span className="mx-1">/</span>
+          </li>
+          <li>
+            <Link to="/blogs" className="hover:underline text-black">
+              Blogs
+            </Link>
+            <span className="mx-1">/</span>
+          </li>
+          <li className="text-black">{blog.title}</li>
+        </ol>
+      </nav>
+
       <h1 className="heading-2 text-black  mb-2 py-4">{blog.title}</h1>
 
       <div className="flex flex-wrap items-center text-sm text-gray-800 0 gap-3 mb-6">
