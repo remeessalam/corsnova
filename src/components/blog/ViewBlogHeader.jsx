@@ -14,13 +14,13 @@ function ViewBlogHeader({ blog }) {
       <nav className="text-sm text-gray-600 mb-2">
         <ol className="flex flex-wrap gap-2">
           <li>
-            <Link to="/" className="hover:underline text-black">
+            <Link to="/" className="hover:underline !text-black">
               Home
             </Link>
             <span className="mx-1">/</span>
           </li>
           <li>
-            <Link to="/blogs" className="hover:underline text-black">
+            <Link to="/blogs" className="hover:underline !text-black">
               Blogs
             </Link>
             <span className="mx-1">/</span>

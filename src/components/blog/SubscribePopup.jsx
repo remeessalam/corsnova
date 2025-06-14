@@ -144,7 +144,7 @@ const SubscribePopup = ({ onClose }) => {
                   </>
                 ) : (
                   <>
-                    <IoMail /> Get My Free Call
+                    <IoMail /> Get Our Free Call
                   </>
                 )}
               </button>

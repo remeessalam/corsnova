@@ -21,7 +21,9 @@ function BlogPage() {
     <>
       <WebsiteHeader />
 
-      <div className=" max-w-screen min-h-screen">
+      <div className="relative max-w-screen min-h-screen">
+        <div className="absolute inset-0 h-[30rem] w-full bg-gradient-to-b from-primary via-secondary/50 to-white" />
+
         <BlogHeader />
         <div className="wrapper pb-[3rem]">
           {isLoading ? (

@@ -123,6 +123,12 @@ function BlogView() {
       </div>
     );
   }
+
+  let atag = document.getElementsByTagName("a");
+  for (let i = 0; i < atag.length; i++) {
+    atag[i].style.color = "#E6C200";
+    atag[i].classList.add("custom-hover");
+  }
   let h1tag = document.getElementsByTagName("h1");
   for (let i = 0; i < h1tag.length; i++) {
     h1tag[i].style.fontSize = "2rem";
@@ -227,7 +233,7 @@ function BlogView() {
             <div className="text-center mt-4 mb-12">
               <Link
                 to="/blogs"
-                className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition"
+                className="px-6 py-3 bg-primary !text-black rounded-lg hover:bg-primary/90 transition"
               >
                 View All Blogs
               </Link>
