@@ -9,7 +9,7 @@ function ViewBlogHeader({ blog }) {
     : format(new Date(blog.createdAt), "MMMM dd, yyyy");
 
   return (
-    <header className="z-10" data-aos="fade-up">
+    <header className="z-10 " data-aos="fade-up">
       {/* ✅ Breadcrumb */}
       <nav className="text-sm text-gray-600 mb-2">
         <ol className="flex flex-wrap gap-2">
@@ -29,7 +29,9 @@ function ViewBlogHeader({ blog }) {
         </ol>
       </nav>
 
-      <h1 className="heading-2 text-black  mb-2 py-4">{blog.title}</h1>
+      <h1 className="heading-2 !text-[2.25rem] md:!text-[2.5rem] text-black  mb-2 py-4">
+        {blog.title}
+      </h1>
 
       <div className="flex flex-wrap items-center text-sm text-gray-800 0 gap-3 mb-6">
         <div className="flex items-center gap-2">
